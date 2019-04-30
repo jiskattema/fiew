@@ -16,7 +16,9 @@
     "dat.gui": "^0.7.5",
     "oimo": "^1.0.9",
     "three": "^0.102.1",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "webaudio-tinysynth": "^1.1.2",
+    "webmidi": "^2.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
