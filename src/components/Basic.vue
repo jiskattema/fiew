@@ -6,7 +6,14 @@
 <script>
 var utils = require('../utils')
 
+const PLAYER_NAME = 'showNote'
+
+var playerStatus = 'uninitialized'
+var groups = {}
+
 function initializeGroups (THREE, scene) {
+  playerStatus = 'initializing'
+
   var font = new THREE.Font(require('./helvetiker_bold.typeface.json'))
 
   var material = new THREE.MeshPhongMaterial({
@@ -14,18 +21,17 @@ function initializeGroups (THREE, scene) {
     specular: 0x44f4f4
   })
 
-  var groups = {}
   utils.names.forEach(name => {
     var geometry = new THREE.TextGeometry(name, {
       font: font,
       size: 80,
       height: 70,
-      curveSegments: 12,
+      curveSegments: 8,
       bevelEnabled: true,
       bevelThickness: 2,
       bevelSize: 1.5,
-      bevelOffset: 0,
-      bevelSegments: 4
+      bevelOffset: 1,
+      bevelSegments: 2
     })
 
     geometry.center()
@@ -45,55 +51,17 @@ function initializeGroups (THREE, scene) {
     meshMirror.position.z = 20 // height
     meshMirror.rotation.x = Math.PI
     groups[name].add(meshMirror)
-
-    scene.add(groups[name])
   })
 
-  return groups
+  playerStatus = 'initialized'
 }
 
 module.exports = {
+  // renderer, camera, and plane are private state of the Vue component,
+  // but having Vue observe complex THREEjs objects is really slow
+  // they are created and added in the mounted() hook
   data () {
-    var THREE = this.$THREE
-    var width = 800
-    var height = 600
-
-    var scene = new THREE.Scene()
-    scene.background = new THREE.Color(0xa6bddb)
-    scene.fog = new THREE.Fog(0x000000, 250, 1400)
-
-    var pointLight = new THREE.PointLight(0x2b8cbe, 1.5)
-    pointLight.position.set(0, 100, 90)
-    scene.add(pointLight)
-
-    var camera = new THREE.PerspectiveCamera(30, width / height, 1, 1500)
-    camera.position.set(0, 100, 450)
-    camera.lookAt(0, 0, 0)
-
-    var renderer = new THREE.WebGLRenderer()
-    renderer.setPixelRatio(window.devicePixelRatio)
-    renderer.setSize(width, height)
-
-    var groups = initializeGroups(THREE, scene)
-
-    var plane = new THREE.Mesh(
-      new THREE.PlaneBufferGeometry(10000, 10000).center(),
-      new THREE.MeshBasicMaterial({
-        color: 0xffffff,
-        opacity: 0.5,
-        transparent: true
-      })
-    )
-
-    plane.position.y = 0
-    plane.rotation.x = -Math.PI / 2
-    scene.add(plane)
-
     return {
-      renderer: renderer,
-      camera: camera,
-      scene: scene,
-      groups: groups,
       width: 800,
       height: 600
     }
@@ -103,18 +71,22 @@ module.exports = {
       var note = utils.midiNumberToNote(evt.note.number)
 
       utils.names.forEach(name => {
-        this.groups[name].visible = false
+        groups[name].visible = false
       })
 
-      var group = this.groups[note.key] || this.groups['C']
+      var group = groups[note.key] || groups['C']
       group.visible = true
       group.scale.x = evt.velocity
       group.scale.y = evt.velocity
       group.scale.z = evt.velocity
     },
     tick () {
+      if (playerStatus !== 'initialized') {
+        return
+      }
+
       utils.names.forEach(name => {
-        this.groups[name].rotateY(0.2)
+        groups[name].rotateY(0.2)
       })
 
       var p = this.$refs['threejs']
@@ -130,8 +102,51 @@ module.exports = {
     }
   },
   mounted () {
+    var THREE = this.$THREE
+
+    this.scene = new THREE.Scene()
+    this.scene.background = new THREE.Color(0xa6bddb)
+    this.scene.fog = new THREE.Fog(0x000000, 250, 1400)
+
+    var pointLight = new THREE.PointLight(0x2b8cbe, 1.5)
+    pointLight.position.set(0, 100, 90)
+    this.scene.add(pointLight)
+
+    this.camera = new THREE.PerspectiveCamera(30, this.width / this.height, 1, 1500)
+    this.camera.position.set(0, 100, 450)
+    this.camera.lookAt(0, 0, 0)
+
+    this.renderer = new THREE.WebGLRenderer()
+    this.renderer.setPixelRatio(window.devicePixelRatio)
+    this.renderer.setSize(this.width, this.height)
+
+    this.plane = new THREE.Mesh(
+      new THREE.PlaneBufferGeometry(10000, 10000).center(),
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        opacity: 0.5,
+        transparent: true
+      })
+    )
+
+    this.plane.position.y = 0
+    this.plane.rotation.x = -Math.PI / 2
+    this.scene.add(this.plane)
+
     this.$refs['threejs'].appendChild(this.renderer.domElement)
-    utils.addPlayer('showNote', this.tick, this.setNote, null, this)
+
+    if (playerStatus === 'uninitialized') {
+      initializeGroups(THREE, this.scene)
+    }
+
+    utils.names.forEach(name => {
+      this.scene.add(groups[name])
+    })
+
+    utils.addPlayer(PLAYER_NAME, this.tick, this.setNote, null, this)
+  },
+  beforeDestroy () {
+    utils.removePlayer(PLAYER_NAME)
   }
 }
 </script>

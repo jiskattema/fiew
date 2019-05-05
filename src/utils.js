@@ -5,7 +5,7 @@ export var names = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
 
-export var players = []
+export var players = {}
 
 export function addPlayer (name, tick, noteOn, noteOff, scope) {
   console.log('Adding player', name)
@@ -16,6 +16,11 @@ export function addPlayer (name, tick, noteOn, noteOff, scope) {
     noteOff: noteOff,
     scope: scope
   }
+}
+
+export function removePlayer (name) {
+  console.log('Removing player', name)
+  delete players[name]
 }
 
 export function noteOn (evt) {
@@ -61,6 +66,7 @@ export default {
   players: players,
   names: names,
   addPlayer: addPlayer,
+  removePlayer: removePlayer,
   midiNumberToNote: midiNumberToNote,
   noteOn: noteOn,
   noteOff: noteOff,
