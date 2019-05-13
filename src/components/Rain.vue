@@ -5,13 +5,14 @@
 
 <script>
 var utils = require('../utils')
+var THREE = require('three')
 
 const PLAYER_NAME = 'rain'
 
 var playerStatus = 'uninitialized'
 var meshes = []
 
-function initializeMeshes (THREE, scene) {
+function initializeMeshes (scene) {
   playerStatus = 'initializing'
 
   var material = new THREE.MeshPhongMaterial({
@@ -53,9 +54,6 @@ module.exports = {
       this.scene.add(mesh)
     },
 
-    noteOff (evt) {
-    },
-
     tick () {
       if (playerStatus !== 'initialized') {
         return
@@ -84,8 +82,6 @@ module.exports = {
     }
   },
   mounted () {
-    var THREE = this.$THREE
-
     this.scene = new THREE.Scene()
     this.scene.background = new THREE.Color(0xa6bddb)
 
@@ -98,16 +94,26 @@ module.exports = {
     this.camera.position.z = 10.0
     this.camera.lookAt(0, 0, 0)
 
+    var p = this.$refs['threejs']
+    this.width = p.offsetWidth
+    this.height = p.offsetHeight
+
     this.renderer = new THREE.WebGLRenderer()
+    this.renderer.setSize(this.width, this.height)
 
     this.$refs['threejs'].appendChild(this.renderer.domElement)
     if (playerStatus === 'uninitialized') {
       initializeMeshes(THREE, this.scene)
     }
-    utils.addPlayer(PLAYER_NAME, this.tick, this.noteOn, this.noteOff, this)
+    this.$store.commit('addPlayer', {
+      name: PLAYER_NAME,
+      tick: this.tick,
+      noteOn: this.noteOn,
+      scope: this
+    })
   },
   beforeDestroy () {
-    utils.removePlayer(PLAYER_NAME)
+    this.$store.commit('removePlayer', PLAYER_NAME)
   }
 }
 </script>

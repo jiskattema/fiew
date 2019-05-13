@@ -5,6 +5,7 @@
 
 <script>
 var utils = require('../utils')
+var THREE = require('three')
 
 const PLAYER_NAME = 'showNote'
 
@@ -81,7 +82,7 @@ module.exports = {
       group.scale.z = evt.velocity
     },
     tick () {
-      if (playerStatus !== 'initialized') {
+      if (playerStatus !== 'initialized' || !this.$refs['threejs']) {
         return
       }
 
@@ -102,8 +103,6 @@ module.exports = {
     }
   },
   mounted () {
-    var THREE = this.$THREE
-
     this.scene = new THREE.Scene()
     this.scene.background = new THREE.Color(0xa6bddb)
     this.scene.fog = new THREE.Fog(0x000000, 250, 1400)
@@ -111,6 +110,10 @@ module.exports = {
     var pointLight = new THREE.PointLight(0x2b8cbe, 1.5)
     pointLight.position.set(0, 100, 90)
     this.scene.add(pointLight)
+
+    var p = this.$refs['threejs']
+    this.width = p.offsetWidth
+    this.height = p.offsetHeight
 
     this.camera = new THREE.PerspectiveCamera(30, this.width / this.height, 1, 1500)
     this.camera.position.set(0, 100, 450)
@@ -143,10 +146,15 @@ module.exports = {
       this.scene.add(groups[name])
     })
 
-    utils.addPlayer(PLAYER_NAME, this.tick, this.setNote, null, this)
+    this.$store.commit('addPlayer', {
+      name: PLAYER_NAME,
+      tick: this.tick,
+      noteOn: this.setNote,
+      scope: this
+    })
   },
   beforeDestroy () {
-    utils.removePlayer(PLAYER_NAME)
+    this.$store.commit('removePlayer', PLAYER_NAME)
   }
 }
 </script>
