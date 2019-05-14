@@ -2,12 +2,22 @@ export const states = {
   KEY_NONE: 0,
   KEY_PRESSED: 1,
   KEY_HOLD: 2,
+  KEY_SUSTAIN: 3,
+
   HOLD_NONE: 0,
-  HOLD_PRESSED: 1
+  HOLD_PRESSED: 1,
+
+  SUSTAIN_NONE: 0,
+  SUSTAIN_PRESSED: 1,
+
+  SOFT_NONE: 0,
+  SOFT_PRESSED: 1
 }
 
 export var keyStates = Array(128).fill(states.KEY_NONE)
 export var holdState = states.HOLD_NONE
+export var sustainState = states.SUSTAIN_NONE
+export var softState = states.SOFT_NONE
 
 // midi note 60 is C4, and 72 is C5
 export var names = [
@@ -176,6 +186,8 @@ export default {
   states: states,
   keyStates: keyStates,
   holdState: holdState,
+  sustainState: sustainState,
+  softState: softState,
   names: names,
   getNormalForm: getNormalForm,
   getPitchSet: getPitchSet,
