@@ -38,9 +38,7 @@ export default new Vuex.Store({
         input.addListener('noteon', 'all', evt => {
           synth.noteOn(evt.channel, evt.note.number, evt.rawVelocity)
 
-          if (utils.activeNotes.indexOf(evt.note.number) === -1) {
-            utils.activeNotes.push(evt.note.number)
-          }
+          utils.keyStates[evt.note.number] = utils.states.KEY_PRESSED
 
           Object.keys(state.players).forEach(name => {
             var player = state.players[name]
@@ -53,9 +51,10 @@ export default new Vuex.Store({
         input.addListener('noteoff', 'all', evt => {
           synth.noteOff(evt.channel, evt.note.number)
 
-          var i = utils.activeNotes.indexOf(evt.note.number)
-          if (i !== -1) {
-            utils.activeNotes.splice(i, 1)
+          if (utils.holdState === utils.states.HOLD_NONE) {
+            utils.keyStates[evt.note.number] = utils.states.KEY_NONE
+          } else if (utils.holdState === utils.states.HOLD_PRESSED) {
+            utils.keyStates[evt.note.number] = utils.states.KEY_HOLD
           }
 
           Object.keys(state.players).forEach(name => {
@@ -64,6 +63,25 @@ export default new Vuex.Store({
               player.noteOff.call(player.scope, evt)
             }
           })
+        })
+
+        input.addListener('controlchange', 'all', evt => {
+          // piano has pedal (left to right)
+          // softpedal
+          // sustenutopedal
+          // holdpedal
+          if (evt.controller.name === 'holdpedal') {
+            var newstate = evt.value > 64 ? utils.states.HOLD_PRESSED : utils.states.HOLD_NONE
+            if (newstate === utils.states.HOLD_NONE) {
+              // pedal is released, release all held keys
+              utils.keyStates.forEach((state, i) => {
+                if (state === utils.states.KEY_HOLD) {
+                  utils.keyStates[i] = utils.states.KEY_NONE
+                }
+              })
+            }
+            utils.holdState = newstate
+          }
         })
       }
     },
@@ -93,7 +111,7 @@ export default new Vuex.Store({
       }
       commit('setInputDevice', n)
     },
-    ouputdeviceNext ({ commit, state }) {
+    outputdeviceNext ({ commit, state }) {
       var n = state.outputdevice + 1
       if (n >= WebMidi.outputs.length) {
         n = 0

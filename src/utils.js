@@ -1,9 +1,28 @@
-export var activeNotes = []
+export const states = {
+  KEY_NONE: 0,
+  KEY_PRESSED: 1,
+  KEY_HOLD: 2,
+  HOLD_NONE: 0,
+  HOLD_PRESSED: 1
+}
+
+export var keyStates = Array(128).fill(states.KEY_NONE)
+export var holdState = states.HOLD_NONE
 
 // midi note 60 is C4, and 72 is C5
 export var names = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
+
+function getActiveNotes () {
+  var activeNotes = []
+  keyStates.forEach((state, i) => {
+    if (state !== states.KEY_NONE) {
+      activeNotes.push(i)
+    }
+  })
+  return activeNotes
+}
 
 export function midiNumberToNote (number) {
   number = 1 * number
@@ -17,7 +36,7 @@ export function midiNumberToNote (number) {
 
 export function getPitchSet (midiNotes) {
   if (!midiNotes) {
-    midiNotes = activeNotes
+    midiNotes = getActiveNotes()
   }
 
   // map midi notes to the interval [0, 11]
@@ -35,7 +54,7 @@ export function getPitchSet (midiNotes) {
 
 export function getPitchCount (midiNotes) {
   if (!midiNotes) {
-    midiNotes = activeNotes
+    midiNotes = getActiveNotes()
   }
 
   // map midi notes to the interval [0, 11]
@@ -59,11 +78,11 @@ export function getPitchPhases (midiNotes) {
   for (let k = 0; k < 12; k++) {
     for (let n = 0; n < 12; n++) {
       real[k] += (pitches[n] ? 1 : 0) * Math.cos(2 * Math.PI * k * n / 12)
-      img[k] += (pitches[n] ? 1 : 0) * -Math.sin(2 * Math.PI * k * n / 12)
+      img[k] += (pitches[n] ? 1 : 0) * Math.sin(2 * Math.PI * k * n / 12)
     }
   }
   for (let k = 0; k < 12; k++) {
-    phases[k] = Math.atan2(img[k], real[k]) * 6 / Math.PI
+    phases[k] = Math.atan2(img[k], real[k])
     radii[k] = Math.sqrt(img[k] ** 2 + real[k] ** 2)
   }
   return [phases, radii]
@@ -154,7 +173,9 @@ export function getPrimeForm (form) {
 }
 
 export default {
-  activeNotes: activeNotes,
+  states: states,
+  keyStates: keyStates,
+  holdState: holdState,
   names: names,
   getNormalForm: getNormalForm,
   getPitchSet: getPitchSet,
