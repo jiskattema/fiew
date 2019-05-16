@@ -14,15 +14,13 @@
     <div class="midiconf">
       <ul class="midilist">
         <li v-on:click="nextInput">
-          <img class="midiimg" src="./settings_midi.svg">
           <span>{{ inputdeviceName }}</span>
-        </li>
-        <!--
-        <li v-on:click="nextOutput">
           <img class="midiimg" src="./settings_midi.svg">
-          <span>{{ outputdeviceName }}</span>
         </li>
-        -->
+        <li v-on:click="nextOutput">
+          <span>{{ outputdeviceName }}</span>
+          <img class="midiimg" src="./settings_midi.svg">
+        </li>
       </ul>
     </div>
   </div>
@@ -36,17 +34,17 @@
 export default {
   name: 'Home',
   methods: {
-    // nextOutput () {
-    //   this.$store.dispatch('outputdeviceNext')
-    // }.
+    nextOutput () {
+      this.$store.dispatch('outputdeviceNext')
+    },
     nextInput () {
       this.$store.dispatch('inputdeviceNext')
     }
   },
   computed: {
-    // outputdeviceName () {
-    //   return this.$store.state.inputdeviceName
-    // },
+    outputdeviceName () {
+      return this.$store.state.outputdeviceName
+    },
     inputdeviceName () {
       return this.$store.state.inputdeviceName
     }
@@ -61,8 +59,8 @@ export default {
 }
 .midiconf {
   position: absolute;
-  left: 60vw;
-  bottom: 25vh;
+  right: 10vw;
+  bottom: 10vh;
   width: 18vw;
   height: 22vh;
   white-space: nowrap;

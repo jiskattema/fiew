@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 import WebMidi from 'webmidi'
 import utils from './utils'
 
+const DEVICE_OFF = 'OFF'
+
 Vue.use(Vuex)
 
 var input
@@ -11,10 +13,10 @@ var output
 
 export default new Vuex.Store({
   state: {
-    inputdevice: 0,
-    outputdevice: 0,
-    inputdeviceName: 'unset',
-    outputdeviceName: 'unset',
+    inputdevice: -1,
+    outputdevice: -1,
+    inputdeviceName: DEVICE_OFF,
+    outputdeviceName: DEVICE_OFF,
     players: {}
   },
   getters: { },
@@ -29,6 +31,13 @@ export default new Vuex.Store({
       if (input) {
         // remove all listener
         input.removeListener()
+      }
+
+      if (number === -1) {
+        input = null
+        state.inputdevice = -1
+        state.inputdeviceName = DEVICE_OFF
+        return
       }
 
       // get a new listener
@@ -138,14 +147,23 @@ export default new Vuex.Store({
             utils.softState = evt.value > 64 ? utils.states.SOFT_PRESSED : utils.states.SOFT_NONE
           }
         })
+      } else {
+        alert('Cannot get MIDI device')
       }
-      if (output && input) {
+      if (state.outputdevice !== -1 && output && input) {
         input.addListener('midimessage', 'all', evt => {
           output._midiOutput.send(evt.data)
         })
       }
     },
     setOutputDevice (state, number) {
+      if (number === -1) {
+        output = null
+        state.outputdevice = -1
+        state.outputdeviceName = DEVICE_OFF
+        return
+      }
+
       output = WebMidi.outputs[number]
       if (output) {
         state.outputdevice = number
@@ -154,7 +172,7 @@ export default new Vuex.Store({
       if (input) {
         input.removeListener('midimessage')
       }
-      if (output && input) {
+      if (state.outputdevice !== -1 && output && input) {
         input.addListener('midimessage', 'all', evt => {
           output._midiOutput.send(evt.data)
         })
@@ -167,7 +185,7 @@ export default new Vuex.Store({
         if (err) {
           console.error('WebMidi enable error:', err)
         } else {
-          commit('setOutputDevice', 0)
+          commit('setOutputDevice', -1)
           commit('setInputDevice', 0)
         }
       })
@@ -175,14 +193,14 @@ export default new Vuex.Store({
     inputdeviceNext ({ commit, state }) {
       var n = state.inputdevice + 1
       if (n >= WebMidi.inputs.length) {
-        n = 0
+        n = -1
       }
       commit('setInputDevice', n)
     },
     outputdeviceNext ({ commit, state }) {
       var n = state.outputdevice + 1
       if (n >= WebMidi.outputs.length) {
-        n = 0
+        n = -1
       }
       commit('setOutputDevice', n)
     }

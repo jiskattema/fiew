@@ -38,7 +38,7 @@ const PhaseCircleR = [
 
 const noteR = 3
 const dotR = 5
-const DotThreshold = 0.7
+const DotThreshold = 1
 
 var playerStatus = 'uninitialized'
 
@@ -114,22 +114,22 @@ module.exports = {
       this.ph6 = Math.round(dft[0][6] * 180 / Math.PI)
 
       this.r0 = dft[1][0] || 0
-      this.r1 = this.r0 ? Math.round(100 * dft[1][1] / this.r0) : 0
-      this.r2 = this.r0 ? Math.round(100 * dft[1][2] / this.r0) : 0
-      this.r3 = this.r0 ? Math.round(100 * dft[1][3] / this.r0) : 0
-      this.r4 = this.r0 ? Math.round(100 * dft[1][4] / this.r0) : 0
-      this.r5 = this.r0 ? Math.round(100 * dft[1][5] / this.r0) : 0
-      this.r6 = this.r0 ? Math.round(100 * dft[1][6] / this.r0) : 0
+      this.r1 = this.r0 ? Math.round(dft[1][1]) : 0
+      this.r2 = this.r0 ? Math.round(dft[1][2]) : 0
+      this.r3 = this.r0 ? Math.round(dft[1][3]) : 0
+      this.r4 = this.r0 ? Math.round(dft[1][4]) : 0
+      this.r5 = this.r0 ? Math.round(dft[1][5]) : 0
+      this.r6 = this.r0 ? Math.round(dft[1][6]) : 0
 
       // opacity and linewidth reflect the real part of the DFT
       // of the current pitch set
       var r0 = dft[1][0] || 100000
-      this.mystate['PhaseCircle1'].linewidth = 6 * (dft[1][1] / r0) + 1
-      this.mystate['PhaseCircle2'].linewidth = 6 * (dft[1][2] / r0) + 1
-      this.mystate['PhaseCircle3'].linewidth = 6 * (dft[1][3] / r0) + 1
-      this.mystate['PhaseCircle4'].linewidth = 6 * (dft[1][4] / r0) + 1
-      this.mystate['PhaseCircle5'].linewidth = 6 * (dft[1][5] / r0) + 1
-      this.mystate['PhaseCircle6'].linewidth = 6 * (dft[1][6] / r0) + 1
+      this.mystate['PhaseCircle1'].linewidth = 2 * dft[1][1] + 1
+      this.mystate['PhaseCircle2'].linewidth = 2 * dft[1][2] + 1
+      this.mystate['PhaseCircle3'].linewidth = 2 * dft[1][3] + 1
+      this.mystate['PhaseCircle4'].linewidth = 2 * dft[1][4] + 1
+      this.mystate['PhaseCircle5'].linewidth = 2 * dft[1][5] + 1
+      this.mystate['PhaseCircle6'].linewidth = 2 * dft[1][6] + 1
       this.mystate['PhaseCircle1'].opacity = 0.9 * (dft[1][1] / r0) + 0.1
       this.mystate['PhaseCircle2'].opacity = 0.9 * (dft[1][2] / r0) + 0.1
       this.mystate['PhaseCircle3'].opacity = 0.9 * (dft[1][3] / r0) + 0.1
@@ -269,5 +269,6 @@ div {
 }
 td {
   width: 5em;
+  white-space: nowrap;
 }
 </style>
