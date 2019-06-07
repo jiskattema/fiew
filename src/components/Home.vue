@@ -10,6 +10,9 @@
       <router-link to="/dft">
         <img class="player" src="./dft.png">
       </router-link>
+      <router-link to="/tonnetz">
+        <img class="player" src="./tonnetz.png">
+      </router-link>
     </div>
     <div class="midiconf">
       <ul class="midilist">
