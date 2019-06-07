@@ -17,18 +17,23 @@ var app = new Vue({
 app.$mount('#app')
 
 store.dispatch('connectToMidi')
+window.utils = require('./utils')
 
-var delay = 200
+var delay = 30 // desired interval in miliseconds
+var previousTimestamp = Date.now()
+
 function tick () {
+  var currentTimestamp = Date.now()
+  var elapsed = currentTimestamp - previousTimestamp
+  var nextDelay = Math.max(delay - elapsed, 20)
+
   Object.keys(store.state.players).forEach(name => {
     var player = store.state.players[name]
     if (player.tick) {
-      player.tick.call(player.scope)
+      player.tick.call(player.scope, elapsed)
     }
   })
-  setTimeout(tick, delay)
+  setTimeout(tick, nextDelay)
 }
 
 tick()
-
-window.utils = require('./utils')
