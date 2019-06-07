@@ -1,9 +1,9 @@
 {
-  "name": "harmonic-vue",
-  "version": "1.0.0",
+  "name": "fiew",
+  "version": "0.1.0",
   "private": true,
-  "description": "A Vue.js project",
-  "author": "Jisk Attema <j.attema@esciencecenter.nl>",
+  "description": "See your music!",
+  "author": "Jisk Attema <jiskattema@gmail.com>",
   "scripts": {
     "build": "node build/build.js",
     "test": "npm run unit",
@@ -14,15 +14,14 @@
   },
   "dependencies": {
     "@vue/cli": "^3.7.0",
+    "chroma-js": "^2.0.3",
     "dat.gui": "^0.7.5",
     "oimo": "^1.0.9",
-    "register-service-worker": "^1.6.2",
     "three": "^0.102.1",
     "two.js": "^0.7.0-beta.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.0",
-    "webaudio-tinysynth": "^1.1.2",
     "webmidi": "^2.3.3"
   },
   "devDependencies": {

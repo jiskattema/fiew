@@ -1,13 +1,38 @@
-# harmonic-vue
+# Fiew
 
-> A Vue.js project
+See your music!
+
+These are some experiments to visualize music in an informative way: see the notes that you play real-time, visualize the harmonic structure, and plot the music's dynamics and rhythm.
+
+There are many applications that visualize music.
+In most cases, the focus is on aesthetics where a sound spectrum is animated in some way.
+Guitar-hero inspired piano-role style visualizations are common on YouTube, but this is more a gamification of music.
+Some scientific investigations have been done over the years.
+However, their code is not easily available or uses complex and expensive hardware/software.
+With this project I want to provide a simple (re)implementation in Javascript to play around with, and try some ideas of my own.
+
+I am also curious how far I can get using Javascript; latency and rendering performance will probably become an issue later on.
+For reference, I'm using a Kawai CA-67 piano with a Yamaha MD-BT01 Bluetooth LE adaptor, and visualize on a low end 2018 Samsung tablet.
+
+
+Inspiration:
+
+ * [The Tonnetz](https://en.wikipedia.org/wiki/Tonnetz)
+ * [The Torii of phases](https://arxiv.org/abs/1208.4774)
+ * [Forte's inventorisation of pitch class sets](https://en.wikipedia.org/wiki/List_of_pitch-class_sets), as described in _The Structure of Atonal Music_ (1973, ISBN 0-300-02120-8).
+ * Mapping Tone Helixes to Cylindrical Lattices using Chiral Angles, Hanlin Hu, Brett Park and David Gerhard, ICMC2015
+
+Resources:
+ * [International Computer Music Association](http://www.computermusic.org/)
 
 ## Try it
 
 
-### With MIDI
+### With MIDI hardware
 
 Setup your MIDI devices, fi. over USB (on android, make sure the device connects as a MIDI device), or using BLE MIDI (on android, this probabaly requires an extra App).
+
+Visit the demo site with a modern browser.
 
 Select the relevant MIDI input and output devices by clicking on the midi icons in the bottom left.
 
