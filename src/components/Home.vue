@@ -15,7 +15,7 @@
       </router-link>
     </div>
     <div class="branding">
-      <img src="/static/img/logo.png" style="display:inline-block">
+      <img src="../../static/img/logo.png" style="display:inline-block">
       Fiew
     </div>
     <div class="midiconf">
