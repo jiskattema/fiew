@@ -17,11 +17,11 @@
     <div class="midiconf">
       <ul class="midilist">
         <li v-on:click="nextInput">
-          <span>{{ inputdeviceName }}</span>
+          <span class="midiname">{{ inputdeviceName }}</span>
           <img class="midiimg" src="./settings_midi.svg">
         </li>
         <li v-on:click="nextOutput">
-          <span>{{ outputdeviceName }}</span>
+          <span class="midiname">{{ outputdeviceName }}</span>
           <img class="midiimg" src="./settings_midi.svg">
         </li>
       </ul>
@@ -56,6 +56,9 @@ export default {
 </script>
 
 <style scoped>
+#home {
+  margin-top: 5em;
+}
 .player {
   width: 25%;
   height: 25vh;
@@ -64,17 +67,22 @@ export default {
   position: absolute;
   right: 10vw;
   bottom: 10vh;
-  width: 18vw;
   height: 22vh;
   white-space: nowrap;
+}
+.midilist {
+  text-align: right;
 }
 .midiimg {
   vertical-align: middle;
   width: 10vh;
   height: 10vh;
 }
+.midiname {
+}
 ul {
   list-style: none;
   font-size: xx-large;
+  user-select: none;
 }
 </style>

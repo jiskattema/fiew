@@ -162,7 +162,7 @@ module.exports = {
 <style scoped>
 div {
   width: 100%;
-  height: 95vh;
+  height: 98vh;
   margin-top: 0;
 }
 </style>
