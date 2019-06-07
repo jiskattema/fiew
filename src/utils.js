@@ -24,6 +24,14 @@ export var names = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
 
+export var namesFlat = [
+  'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'
+]
+
+export var namesSharp = [
+  'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
+]
+
 function getActiveNotes () {
   var activeNotes = []
   keyStates.forEach((state, i) => {
@@ -189,6 +197,8 @@ export default {
   sustainState: sustainState,
   softState: softState,
   names: names,
+  namesFlat: namesFlat,
+  namesSharp: namesSharp,
   getNormalForm: getNormalForm,
   getPitchSet: getPitchSet,
   getPitchPhases: getPitchPhases,

@@ -22,7 +22,12 @@ export default new Vuex.Store({
   getters: { },
   mutations: {
     addPlayer (state, player) {
-      state.players[name] = player
+      state.players[player.name] = {
+        name: player.name,
+        noteOn: player.noteOn,
+        noteOff: player.noteOff,
+        tick: player.tick
+      }
     },
     removePlayer (state, name) {
       delete state.players[name]
