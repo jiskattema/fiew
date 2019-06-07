@@ -14,6 +14,10 @@
         <img class="player" src="./tonnetz.png">
       </router-link>
     </div>
+    <div class="branding">
+      <img src="/static/img/logo.png" style="display:inline-block">
+      Fiew
+    </div>
     <div class="midiconf">
       <ul class="midilist">
         <li v-on:click="nextInput">
@@ -58,6 +62,13 @@ export default {
 <style scoped>
 #home {
   margin-top: 5em;
+}
+.branding {
+  position: absolute;
+  left: 1vw;
+  bottom: 3vh;
+  font-size: xx-large;
+  text-align: center;
 }
 .player {
   width: 25%;
