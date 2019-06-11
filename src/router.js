@@ -6,6 +6,7 @@ import Basic from './components/Basic.vue'
 import Rain from './components/Rain.vue'
 import DFT from './components/DFT.vue'
 import Tonnetz from './components/Tonnetz.vue'
+import Info from './components/Info.vue'
 
 Vue.use(VueRouter)
 const router = new VueRouter({ routes: [
@@ -33,6 +34,11 @@ const router = new VueRouter({ routes: [
     path: '/tonnetz',
     name: 'Tonnetz',
     component: Tonnetz
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: Info
   }
 ]})
 

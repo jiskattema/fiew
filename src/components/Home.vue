@@ -13,6 +13,9 @@
       <router-link to="/tonnetz">
         <img class="player" src="./tonnetz.png">
       </router-link>
+      <router-link to="/info">
+        <img class="player" src="./info.png">
+      </router-link>
     </div>
     <div class="branding">
       <img src="../../static/img/logo.png" style="display:inline-block">
