@@ -1,0 +1,2818 @@
+[
+    {
+        "Forte": "0-1",
+        "Prime form": [],
+        "Interval vector": [0,0,0,0,0,0],
+        "Carter": null,
+        "Possible spacings": ["empty set"],
+        "Forte Complement": ["12-1"]
+    },
+    {
+        "Forte": "1-1",
+        "Prime form": [0],
+        "Interval vector": [0,0,0,0,0,0],
+        "Carter": null,
+        "Possible spacings": ["PU", "P8"],
+        "Forte Complement": ["11-1"]
+    },
+    {
+        "Forte": "2-1",
+        "Prime form": [0,1],
+        "Interval vector": [1,0,0,0,0,0],
+        "Carter": 1,
+        "Possible spacings": ["m2", "M7"],
+        "Forte Complement": ["10-1"]
+    },
+    {
+        "Forte": "2-2",
+        "Prime form": [0,2],
+        "Interval vector": [0,1,0,0,0,0],
+        "Carter": 2,
+        "Possible spacings": ["M2", "m7"],
+        "Forte Complement": ["10-2"]
+    },
+    {
+        "Forte": "2-3",
+        "Prime form": [0,3],
+        "Interval vector": [0,0,1,0,0,0],
+        "Carter": 3,
+        "Possible spacings": ["m3", "M6"],
+        "Forte Complement": ["10-3"]
+    },
+    {
+        "Forte": "2-4",
+        "Prime form": [0,4],
+        "Interval vector": [0,0,0,1,0,0],
+        "Carter": 4,
+        "Possible spacings": ["M3", "m6"],
+        "Forte Complement": ["10-4"]
+    },
+    {
+        "Forte": "2-5",
+        "Prime form": [0,5],
+        "Interval vector": [0,0,0,0,1,0],
+        "Carter": 5,
+        "Possible spacings": ["P4", "P5"],
+        "Forte Complement": ["10-5"]
+    },
+    {
+        "Forte": "2-6",
+        "Prime form": [0,6],
+        "Interval vector": [0,0,0,0,0,1],
+        "Carter": 6,
+        "Possible spacings": ["A4", "d5"],
+        "Forte Complement": ["10-6"]
+    },
+    {
+        "Forte": "3-1",
+        "Prime form": [0,1,2],
+        "Interval vector": [2,1,0,0,0,0],
+        "Carter": 4,
+        "Possible spacings": [],
+        "Forte Complement": ["9-1"]
+    },
+    {
+        "Forte": "3-2A",
+        "Prime form": [0,1,3],
+        "Interval vector": [1,1,1,0,0,0],
+        "Carter": 12,
+        "Possible spacings": [],
+        "Forte Complement": ["9-2A"]
+    },
+    {
+        "Forte": "3-2B",
+        "Prime form": [0,2,3],
+        "Interval vector": [1,1,1,0,0,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["9-2B"]
+    },
+    {
+        "Forte": "3-3A",
+        "Prime form": [0,1,4],
+        "Interval vector": [1,0,1,1,0,0],
+        "Carter": 11,
+        "Possible spacings": [],
+        "Forte Complement": ["9-3B"]
+    },
+    {
+        "Forte": "3-3B",
+        "Prime form": [0,3,4],
+        "Interval vector": [1,0,1,1,0,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["9-3A"]
+    },
+    {
+        "Forte": "3-4A",
+        "Prime form": [0,1,5],
+        "Interval vector": [1,0,0,1,1,0],
+        "Carter": 9,
+        "Possible spacings": [],
+        "Forte Complement": ["9-4B"]
+    },
+    {
+        "Forte": "3-4B",
+        "Prime form": [0,4,5],
+        "Interval vector": [1,0,0,1,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["9-4A"]
+    },
+    {
+        "Forte": "3-5A",
+        "Prime form": [0,1,6],
+        "Interval vector": [1,0,0,0,1,1],
+        "Carter": 7,
+        "Possible spacings": ["Viennese trichord"],
+        "Forte Complement": ["9-5B"]
+    },
+    {
+        "Forte": "3-5B",
+        "Prime form": [0,5,6],
+        "Interval vector": [1,0,0,0,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["9-5A"]
+    },
+    {
+        "Forte": "3-6",
+        "Prime form": [0,2,4],
+        "Interval vector": [0,2,0,1,0,0],
+        "Carter": 3,
+        "Possible spacings": [],
+        "Forte Complement": ["9-6"]
+    },
+    {
+        "Forte": "3-7A",
+        "Prime form": [0,2,5],
+        "Interval vector": [0,1,1,0,1,0],
+        "Carter": 10,
+        "Possible spacings": [],
+        "Forte Complement": ["9-7B"]
+    },
+    {
+        "Forte": "3-7B",
+        "Prime form": [0,3,5],
+        "Interval vector": [0,1,1,0,1,0],
+        "Carter": null,
+        "Possible spacings": ["Blues trichord (min. pentatonic subset)"],
+        "Forte Complement": ["9-7A"]
+    },
+    {
+        "Forte": "3-8A",
+        "Prime form": [0,2,6],
+        "Interval vector": [0,1,0,1,0,1],
+        "Carter": 8,
+        "Possible spacings": ["It6"],
+        "Forte Complement": ["9-8B"]
+    },
+    {
+        "Forte": "3-8B",
+        "Prime form": [0,4,6],
+        "Interval vector": [0,1,0,1,0,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["9-8A"]
+    },
+    {
+        "Forte": "3-9",
+        "Prime form": [0,2,7],
+        "Interval vector": [0,1,0,0,2,0],
+        "Carter": 5,
+        "Possible spacings": ["sus. chord"],
+        "Forte Complement": ["9-9"]
+    },
+    {
+        "Forte": "3-10",
+        "Prime form": [0,3,6],
+        "Interval vector": [0,0,2,0,0,1],
+        "Carter": 2,
+        "Possible spacings": ["dim. chord"],
+        "Forte Complement": ["9-10"]
+    },
+    {
+        "Forte": "3-11A",
+        "Prime form": [0,3,7],
+        "Interval vector": [0,0,1,1,1,0],
+        "Carter": 6,
+        "Possible spacings": ["minor chord"],
+        "Forte Complement": ["9-11B"]
+    },
+    {
+        "Forte": "3-11B",
+        "Prime form": [0,4,7],
+        "Interval vector": [0,0,1,1,1,0],
+        "Carter": null,
+        "Possible spacings": ["major chord"],
+        "Forte Complement": ["9-11A"]
+    },
+    {
+        "Forte": "3-12",
+        "Prime form": [0,4,8],
+        "Interval vector": [0,0,0,3,0,0],
+        "Carter": 1,
+        "Possible spacings": ["Augmented Chord"],
+        "Forte Complement": ["9-12"]
+    },
+    {
+        "Forte": "4-1",
+        "Prime form": [0,1,2,3],
+        "Interval vector": [3,2,1,0,0,0],
+        "Carter": 1,
+        "Possible spacings": [],
+        "Forte Complement": ["8-1"]
+    },
+    {
+        "Forte": "4-2A",
+        "Prime form": [0,1,2,4],
+        "Interval vector": [2,2,1,1,0,0],
+        "Carter": 17,
+        "Possible spacings": [],
+        "Forte Complement": ["8-2B"]
+    },
+    {
+        "Forte": "4-2B",
+        "Prime form": [0,2,3,4],
+        "Interval vector": [2,2,1,1,0,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-2A"]
+    },
+    {
+        "Forte": "4-3",
+        "Prime form": [0,1,3,4],
+        "Interval vector": [2,1,2,1,0,0],
+        "Carter": 9,
+        "Possible spacings": [],
+        "Forte Complement": ["8-3"]
+    },
+    {
+        "Forte": "4-4A",
+        "Prime form": [0,1,2,5],
+        "Interval vector": [2,1,1,1,1,0],
+        "Carter": 20,
+        "Possible spacings": [],
+        "Forte Complement": ["8-4B"]
+    },
+    {
+        "Forte": "4-4B",
+        "Prime form": [0,3,4,5],
+        "Interval vector": [2,1,1,1,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-4A"]
+    },
+    {
+        "Forte": "4-5A",
+        "Prime form": [0,1,2,6],
+        "Interval vector": [2,1,0,1,1,1],
+        "Carter": 22,
+        "Possible spacings": [],
+        "Forte Complement": ["8-5B"]
+    },
+    {
+        "Forte": "4-5B",
+        "Prime form": [0,4,5,6],
+        "Interval vector": [2,1,0,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-5A"]
+    },
+    {
+        "Forte": "4-6",
+        "Prime form": [0,1,2,7],
+        "Interval vector": [2,1,0,0,2,1],
+        "Carter": 6,
+        "Possible spacings": ["dream chord"],
+        "Forte Complement": ["8-6"]
+    },
+    {
+        "Forte": "4-7",
+        "Prime form": [0,1,4,5],
+        "Interval vector": [2,0,1,2,1,0],
+        "Carter": 8,
+        "Possible spacings": [],
+        "Forte Complement": ["8-7"]
+    },
+    {
+        "Forte": "4-8",
+        "Prime form": [0,1,5,6],
+        "Interval vector": [2,0,0,1,2,1],
+        "Carter": 10,
+        "Possible spacings": [],
+        "Forte Complement": ["8-8"]
+    },
+    {
+        "Forte": "4-9",
+        "Prime form": [0,1,6,7],
+        "Interval vector": [2,0,0,0,2,2],
+        "Carter": 2,
+        "Possible spacings": ["distance model"],
+        "Forte Complement": ["8-9"]
+    },
+    {
+        "Forte": "4-10",
+        "Prime form": [0,2,3,5],
+        "Interval vector": [1,2,2,0,1,0],
+        "Carter": 3,
+        "Possible spacings": [],
+        "Forte Complement": ["8-10"]
+    },
+    {
+        "Forte": "4-11A",
+        "Prime form": [0,1,3,5],
+        "Interval vector": [1,2,1,1,1,0],
+        "Carter": 26,
+        "Possible spacings": [],
+        "Forte Complement": ["8-11B"]
+    },
+    {
+        "Forte": "4-11B",
+        "Prime form": [0,2,4,5],
+        "Interval vector": [1,2,1,1,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-11A"]
+    },
+    {
+        "Forte": "4-12A",
+        "Prime form": [0,2,3,6],
+        "Interval vector": [1,1,2,1,0,1],
+        "Carter": 28,
+        "Possible spacings": [],
+        "Forte Complement": ["8-12A"]
+    },
+    {
+        "Forte": "4-12B",
+        "Prime form": [0,3,4,6],
+        "Interval vector": [1,1,2,1,0,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-12B"]
+    },
+    {
+        "Forte": "4-13A",
+        "Prime form": [0,1,3,6],
+        "Interval vector": [1,1,2,0,1,1],
+        "Carter": 7,
+        "Possible spacings": [],
+        "Forte Complement": ["8-13B"]
+    },
+    {
+        "Forte": "4-13B",
+        "Prime form": [0,3,5,6],
+        "Interval vector": [1,1,2,0,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-13A"]
+    },
+    {
+        "Forte": "4-14A",
+        "Prime form": [0,2,3,7],
+        "Interval vector": [1,1,1,1,2,0],
+        "Carter": 25,
+        "Possible spacings": [],
+        "Forte Complement": ["8-14A"]
+    },
+    {
+        "Forte": "4-14B",
+        "Prime form": [0,4,5,7],
+        "Interval vector": [1,1,1,1,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-14B"]
+    },
+    {
+        "Forte": "4-z15A",
+        "Prime form": [0,1,4,6],
+        "Interval vector": [1,1,1,1,1,1],
+        "Carter": 18,
+        "Possible spacings": ["all-interval tetrachord"],
+        "Forte Complement": ["8-z15B"]
+    },
+    {
+        "Forte": "4-z15B",
+        "Prime form": [0,2,5,6],
+        "Interval vector": [1,1,1,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-z15A"]
+    },
+    {
+        "Forte": "4-16A",
+        "Prime form": [0,1,5,7],
+        "Interval vector": [1,1,0,1,2,1],
+        "Carter": 19,
+        "Possible spacings": [],
+        "Forte Complement": ["8-16B"]
+    },
+    {
+        "Forte": "4-16B",
+        "Prime form": [0,2,6,7],
+        "Interval vector": [1,1,0,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-16A"]
+    },
+    {
+        "Forte": "4-17",
+        "Prime form": [0,3,4,7],
+        "Interval vector": [1,0,2,2,1,0],
+        "Carter": 13,
+        "Possible spacings": ["alpha chord"],
+        "Forte Complement": ["8-17"]
+    },
+    {
+        "Forte": "4-18A",
+        "Prime form": [0,1,4,7],
+        "Interval vector": [1,0,2,1,1,1],
+        "Carter": 21,
+        "Possible spacings": ["dim. M7 chord"],
+        "Forte Complement": ["8-18B"]
+    },
+    {
+        "Forte": "4-18B",
+        "Prime form": [0,3,6,7],
+        "Interval vector": [1,0,2,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-18A"]
+    },
+    {
+        "Forte": "4-19A",
+        "Prime form": [0,1,4,8],
+        "Interval vector": [1,0,1,3,1,0],
+        "Carter": 24,
+        "Possible spacings": ["mM7 chord"],
+        "Forte Complement": ["8-19B"]
+    },
+    {
+        "Forte": "4-19B",
+        "Prime form": [0,3,4,8],
+        "Interval vector": [1,0,1,3,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-19A"]
+    },
+    {
+        "Forte": "4-20",
+        "Prime form": [0,1,5,8],
+        "Interval vector": [1,0,1,2,2,0],
+        "Carter": 15,
+        "Possible spacings": ["M7 chord"],
+        "Forte Complement": ["8-20"]
+    },
+    {
+        "Forte": "4-21",
+        "Prime form": [0,2,4,6],
+        "Interval vector": [0,3,0,2,0,1],
+        "Carter": 11,
+        "Possible spacings": [],
+        "Forte Complement": ["8-21"]
+    },
+    {
+        "Forte": "4-22A",
+        "Prime form": [0,2,4,7],
+        "Interval vector": [0,2,1,1,2,0],
+        "Carter": 27,
+        "Possible spacings": ["mu chord"],
+        "Forte Complement": ["8-22B"]
+    },
+    {
+        "Forte": "4-22B",
+        "Prime form": [0,3,5,7],
+        "Interval vector": [0,2,1,1,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-22A"]
+    },
+    {
+        "Forte": "4-23",
+        "Prime form": [0,2,5,7],
+        "Interval vector": [0,2,1,0,3,0],
+        "Carter": 4,
+        "Possible spacings": ["quartal chord"],
+        "Forte Complement": ["8-23"]
+    },
+    {
+        "Forte": "4-24",
+        "Prime form": [0,2,4,8],
+        "Interval vector": [0,2,0,3,0,1],
+        "Carter": 16,
+        "Possible spacings": ["A7 chord"],
+        "Forte Complement": ["8-24"]
+    },
+    {
+        "Forte": "4-25",
+        "Prime form": [0,2,6,8],
+        "Interval vector": [0,2,0,2,0,2],
+        "Carter": 12,
+        "Possible spacings": ["Fr6"],
+        "Forte Complement": ["8-25"]
+    },
+    {
+        "Forte": "4-26",
+        "Prime form": [0,3,5,8],
+        "Interval vector": [0,1,2,1,2,0],
+        "Carter": 14,
+        "Possible spacings": ["minor seventh chord"],
+        "Forte Complement": ["8-26"]
+    },
+    {
+        "Forte": "4-27A",
+        "Prime form": [0,2,5,8],
+        "Interval vector": [0,1,2,1,1,1],
+        "Carter": 29,
+        "Possible spacings": ["Half-diminished seventh chord"],
+        "Forte Complement": ["8-27B"]
+    },
+    {
+        "Forte": "4-27B",
+        "Prime form": [0,3,6,8],
+        "Interval vector": [0,1,2,1,1,1],
+        "Carter": null,
+        "Possible spacings": ["dominant 7th chord"],
+        "Forte Complement": ["8-27A"]
+    },
+    {
+        "Forte": "4-28",
+        "Prime form": [0,3,6,9],
+        "Interval vector": [0,0,4,0,0,2],
+        "Carter": 5,
+        "Possible spacings": ["dim. 7th chord"],
+        "Forte Complement": ["8-28"]
+    },
+    {
+        "Forte": "4-z29A",
+        "Prime form": [0,1,3,7],
+        "Interval vector": [1,1,1,1,1,1],
+        "Carter": 23,
+        "Possible spacings": ["all-interval tetrachord"],
+        "Forte Complement": ["8-z29B"]
+    },
+    {
+        "Forte": "4-z29B",
+        "Prime form": [0,4,6,7],
+        "Interval vector": [1,1,1,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["8-z29A"]
+    },
+    {
+        "Forte": "5-1",
+        "Prime form": [0,1,2,3,4],
+        "Interval vector": [4,3,2,1,0,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-1"]
+    },
+    {
+        "Forte": "5-2A",
+        "Prime form": [0,1,2,3,5],
+        "Interval vector": [3,3,2,1,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-2B"]
+    },
+    {
+        "Forte": "5-2B",
+        "Prime form": [0,2,3,4,5],
+        "Interval vector": [3,3,2,1,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-2A"]
+    },
+    {
+        "Forte": "5-3A",
+        "Prime form": [0,1,2,4,5],
+        "Interval vector": [3,2,2,2,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-3B"]
+    },
+    {
+        "Forte": "5-3B",
+        "Prime form": [0,1,3,4,5],
+        "Interval vector": [3,2,2,2,1,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-3A"]
+    },
+    {
+        "Forte": "5-4A",
+        "Prime form": [0,1,2,3,6],
+        "Interval vector": [3,2,2,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-4B"]
+    },
+    {
+        "Forte": "5-4B",
+        "Prime form": [0,3,4,5,6],
+        "Interval vector": [3,2,2,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-4A"]
+    },
+    {
+        "Forte": "5-5A",
+        "Prime form": [0,1,2,3,7],
+        "Interval vector": [3,2,1,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-5B"]
+    },
+    {
+        "Forte": "5-5B",
+        "Prime form": [0,4,5,6,7],
+        "Interval vector": [3,2,1,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-5A"]
+    },
+    {
+        "Forte": "5-6A",
+        "Prime form": [0,1,2,5,6],
+        "Interval vector": [3,1,1,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-6B"]
+    },
+    {
+        "Forte": "5-6B",
+        "Prime form": [0,1,4,5,6],
+        "Interval vector": [3,1,1,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-6A"]
+    },
+    {
+        "Forte": "5-7A",
+        "Prime form": [0,1,2,6,7],
+        "Interval vector": [3,1,0,1,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-7B"]
+    },
+    {
+        "Forte": "5-7B",
+        "Prime form": [0,1,5,6,7],
+        "Interval vector": [3,1,0,1,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-7A"]
+    },
+    {
+        "Forte": "5-8",
+        "Prime form": [0,2,3,4,6],
+        "Interval vector": [2,3,2,2,0,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-8"]
+    },
+    {
+        "Forte": "5-9A",
+        "Prime form": [0,1,2,4,6],
+        "Interval vector": [2,3,1,2,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-9B"]
+    },
+    {
+        "Forte": "5-9B",
+        "Prime form": [0,2,4,5,6],
+        "Interval vector": [2,3,1,2,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-9A"]
+    },
+    {
+        "Forte": "5-10A",
+        "Prime form": [0,1,3,4,6],
+        "Interval vector": [2,2,3,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-10B"]
+    },
+    {
+        "Forte": "5-10B",
+        "Prime form": [0,2,3,5,6],
+        "Interval vector": [2,2,3,1,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-10A"]
+    },
+    {
+        "Forte": "5-11A",
+        "Prime form": [0,2,3,4,7],
+        "Interval vector": [2,2,2,2,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-11B"]
+    },
+    {
+        "Forte": "5-11B",
+        "Prime form": [0,3,4,5,7],
+        "Interval vector": [2,2,2,2,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-11A"]
+    },
+    {
+        "Forte": "5-z12",
+        "Prime form": [0,1,3,5,6],
+        "Interval vector": [2,2,2,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z12"]
+    },
+    {
+        "Forte": "5-13A",
+        "Prime form": [0,1,2,4,8],
+        "Interval vector": [2,2,1,3,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-13B"]
+    },
+    {
+        "Forte": "5-13B",
+        "Prime form": [0,2,3,4,8],
+        "Interval vector": [2,2,1,3,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-13A"]
+    },
+    {
+        "Forte": "5-14A",
+        "Prime form": [0,1,2,5,7],
+        "Interval vector": [2,2,1,1,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-14B"]
+    },
+    {
+        "Forte": "5-14B",
+        "Prime form": [0,2,5,6,7],
+        "Interval vector": [2,2,1,1,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-14A"]
+    },
+    {
+        "Forte": "5-15",
+        "Prime form": [0,1,2,6,8],
+        "Interval vector": [2,2,0,2,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-15"]
+    },
+    {
+        "Forte": "5-16A",
+        "Prime form": [0,1,3,4,7],
+        "Interval vector": [2,1,3,2,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-16B"]
+    },
+    {
+        "Forte": "5-16B",
+        "Prime form": [0,3,4,6,7],
+        "Interval vector": [2,1,3,2,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-16A"]
+    },
+    {
+        "Forte": "5-z17",
+        "Prime form": [0,1,3,4,8],
+        "Interval vector": [2,1,2,3,2,0],
+        "Carter": null,
+        "Possible spacings": ["Farben chord"],
+        "Forte Complement": ["7-z17"]
+    },
+    {
+        "Forte": "5-z18A",
+        "Prime form": [0,1,4,5,7],
+        "Interval vector": [2,1,2,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z18A"]
+    },
+    {
+        "Forte": "5-z18B",
+        "Prime form": [0,2,3,6,7],
+        "Interval vector": [2,1,2,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z18B"]
+    },
+    {
+        "Forte": "5-19A",
+        "Prime form": [0,1,3,6,7],
+        "Interval vector": [2,1,2,1,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-19B"]
+    },
+    {
+        "Forte": "5-19B",
+        "Prime form": [0,1,4,6,7],
+        "Interval vector": [2,1,2,1,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-19A"]
+    },
+    {
+        "Forte": "5-20A",
+        "Prime form": [0,1,5,6,8],
+        "Interval vector": [2,1,1,2,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-20B"]
+    },
+    {
+        "Forte": "5-20B",
+        "Prime form": [0,2,3,7,8],
+        "Interval vector": [2,1,1,2,3,1],
+        "Carter": null,
+        "Possible spacings": ["In scale"],
+        "Forte Complement": ["7-20A"]
+    },
+    {
+        "Forte": "5-21A",
+        "Prime form": [0,1,4,5,8],
+        "Interval vector": [2,0,2,4,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-21B"]
+    },
+    {
+        "Forte": "5-21B",
+        "Prime form": [0,3,4,7,8],
+        "Interval vector": [2,0,2,4,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-21A"]
+    },
+    {
+        "Forte": "5-22",
+        "Prime form": [0,1,4,7,8],
+        "Interval vector": [2,0,2,3,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-22"]
+    },
+    {
+        "Forte": "5-23A",
+        "Prime form": [0,2,3,5,7],
+        "Interval vector": [1,3,2,1,3,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-23B"]
+    },
+    {
+        "Forte": "5-23B",
+        "Prime form": [0,2,4,5,7],
+        "Interval vector": [1,3,2,1,3,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-23A"]
+    },
+    {
+        "Forte": "5-24A",
+        "Prime form": [0,1,3,5,7],
+        "Interval vector": [1,3,1,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-24B"]
+    },
+    {
+        "Forte": "5-24B",
+        "Prime form": [0,2,4,6,7],
+        "Interval vector": [1,3,1,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-24A"]
+    },
+    {
+        "Forte": "5-25A",
+        "Prime form": [0,2,3,5,8],
+        "Interval vector": [1,2,3,1,2,1],
+        "Carter": null,
+        "Possible spacings": ["Seven six chord"],
+        "Forte Complement": ["7-25B"]
+    },
+    {
+        "Forte": "5-25B",
+        "Prime form": [0,3,5,6,8],
+        "Interval vector": [1,2,3,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-25A"]
+    },
+    {
+        "Forte": "5-26A",
+        "Prime form": [0,2,4,5,8],
+        "Interval vector": [1,2,2,3,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-26A"]
+    },
+    {
+        "Forte": "5-26B",
+        "Prime form": [0,3,4,6,8],
+        "Interval vector": [1,2,2,3,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-26B"]
+    },
+    {
+        "Forte": "5-27A",
+        "Prime form": [0,1,3,5,8],
+        "Interval vector": [1,2,2,2,3,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-27B"]
+    },
+    {
+        "Forte": "5-27B",
+        "Prime form": [0,3,5,7,8],
+        "Interval vector": [1,2,2,2,3,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-27A"]
+    },
+    {
+        "Forte": "5-28A",
+        "Prime form": [0,2,3,6,8],
+        "Interval vector": [1,2,2,2,1,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-28A"]
+    },
+    {
+        "Forte": "5-28B",
+        "Prime form": [0,2,5,6,8],
+        "Interval vector": [1,2,2,2,1,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-28B"]
+    },
+    {
+        "Forte": "5-29A",
+        "Prime form": [0,1,3,6,8],
+        "Interval vector": [1,2,2,1,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-29B"]
+    },
+    {
+        "Forte": "5-29B",
+        "Prime form": [0,2,5,7,8],
+        "Interval vector": [1,2,2,1,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-29A"]
+    },
+    {
+        "Forte": "5-30A",
+        "Prime form": [0,1,4,6,8],
+        "Interval vector": [1,2,1,3,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-30B"]
+    },
+    {
+        "Forte": "5-30B",
+        "Prime form": [0,2,4,7,8],
+        "Interval vector": [1,2,1,3,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-30A"]
+    },
+    {
+        "Forte": "5-31A",
+        "Prime form": [0,1,3,6,9],
+        "Interval vector": [1,1,4,1,1,2],
+        "Carter": null,
+        "Possible spacings": ["beta chord"],
+        "Forte Complement": ["7-31B"]
+    },
+    {
+        "Forte": "5-31B",
+        "Prime form": [0,2,3,6,9],
+        "Interval vector": [1,1,4,1,1,2],
+        "Carter": null,
+        "Possible spacings": ["Dominant minor ninth chord"],
+        "Forte Complement": ["7-31A"]
+    },
+    {
+        "Forte": "5-32A",
+        "Prime form": [0,1,4,6,9],
+        "Interval vector": [1,1,3,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-32B"]
+    },
+    {
+        "Forte": "5-32B",
+        "Prime form": [0,3,5,8,9],
+        "Interval vector": [1,1,3,2,2,1],
+        "Carter": null,
+        "Possible spacings": ["Elektra chord", "gamma chord"],
+        "Forte Complement": ["7-32A"]
+    },
+    {
+        "Forte": "5-33",
+        "Prime form": [0,2,4,6,8],
+        "Interval vector": [0,4,0,4,0,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-33"]
+    },
+    {
+        "Forte": "5-34",
+        "Prime form": [0,2,4,6,9],
+        "Interval vector": [0,3,2,2,2,1],
+        "Carter": null,
+        "Possible spacings": ["Dominant ninth chord"],
+        "Forte Complement": ["7-34"]
+    },
+    {
+        "Forte": "5-35",
+        "Prime form": [0,2,4,7,9],
+        "Interval vector": [0,3,2,1,4,0],
+        "Carter": null,
+        "Possible spacings": ["M pentatonic scale"],
+        "Forte Complement": ["7-35"]
+    },
+    {
+        "Forte": "5-z36A",
+        "Prime form": [0,1,2,4,7],
+        "Interval vector": [2,2,2,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z36B"]
+    },
+    {
+        "Forte": "5-z36B",
+        "Prime form": [0,3,5,6,7],
+        "Interval vector": [2,2,2,1,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z36A"]
+    },
+    {
+        "Forte": "5-z37",
+        "Prime form": [0,3,4,5,8],
+        "Interval vector": [2,1,2,3,2,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z37"]
+    },
+    {
+        "Forte": "5-z38A",
+        "Prime form": [0,1,2,5,8],
+        "Interval vector": [2,1,2,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z38B"]
+    },
+    {
+        "Forte": "5-z38B",
+        "Prime form": [0,3,6,7,8],
+        "Interval vector": [2,1,2,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["7-z38A"]
+    },
+    {
+        "Forte": "6-1",
+        "Prime form": [0,1,2,3,4,5],
+        "Interval vector": [5,4,3,2,1,0],
+        "Carter": 4,
+        "Possible spacings": ["chromatic hexachord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-2A",
+        "Prime form": [0,1,2,3,4,6],
+        "Interval vector": [4,4,3,2,1,1],
+        "Carter": 19,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-2B",
+        "Prime form": [0,2,3,4,5,6],
+        "Interval vector": [4,4,3,2,1,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z3A",
+        "Prime form": [0,1,2,3,5,6],
+        "Interval vector": [4,3,3,2,2,1],
+        "Carter": 49,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z36B"]
+    },
+    {
+        "Forte": "6-z3B",
+        "Prime form": [0,1,3,4,5,6],
+        "Interval vector": [4,3,3,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z36A"]
+    },
+    {
+        "Forte": "6-z4",
+        "Prime form": [0,1,2,4,5,6],
+        "Interval vector": [4,3,2,3,2,1],
+        "Carter": 24,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z37"]
+    },
+    {
+        "Forte": "6-5A",
+        "Prime form": [0,1,2,3,6,7],
+        "Interval vector": [4,2,2,2,3,2],
+        "Carter": 16,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-5B",
+        "Prime form": [0,1,4,5,6,7],
+        "Interval vector": [4,2,2,2,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z6",
+        "Prime form": [0,1,2,5,6,7],
+        "Interval vector": [4,2,1,2,4,2],
+        "Carter": 33,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z38"]
+    },
+    {
+        "Forte": "6-7",
+        "Prime form": [0,1,2,6,7,8],
+        "Interval vector": [4,2,0,2,4,3],
+        "Carter": 7,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-8",
+        "Prime form": [0,2,3,4,5,7],
+        "Interval vector": [3,4,3,2,3,0],
+        "Carter": 5,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-9A",
+        "Prime form": [0,1,2,3,5,7],
+        "Interval vector": [3,4,2,2,3,1],
+        "Carter": 20,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-9B",
+        "Prime form": [0,2,4,5,6,7],
+        "Interval vector": [3,4,2,2,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z10A",
+        "Prime form": [0,1,3,4,5,7],
+        "Interval vector": [3,3,3,3,2,1],
+        "Carter": 42,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z39B"]
+    },
+    {
+        "Forte": "6-z10B",
+        "Prime form": [0,2,3,4,6,7],
+        "Interval vector": [3,3,3,3,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z39A"]
+    },
+    {
+        "Forte": "6-z11A",
+        "Prime form": [0,1,2,4,5,7],
+        "Interval vector": [3,3,3,2,3,1],
+        "Carter": 47,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z40B"]
+    },
+    {
+        "Forte": "6-z11B",
+        "Prime form": [0,2,3,5,6,7],
+        "Interval vector": [3,3,3,2,3,1],
+        "Carter": null,
+        "Possible spacings": ["Sacher hexachord"],
+        "Forte Complement": ["6-z40A"]
+    },
+    {
+        "Forte": "6-z12A",
+        "Prime form": [0,1,2,4,6,7],
+        "Interval vector": [3,3,2,2,3,2],
+        "Carter": 46,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z41B"]
+    },
+    {
+        "Forte": "6-z12B",
+        "Prime form": [0,1,3,5,6,7],
+        "Interval vector": [3,3,2,2,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z41A"]
+    },
+    {
+        "Forte": "6-z13",
+        "Prime form": [0,1,3,4,6,7],
+        "Interval vector": [3,2,4,2,2,2],
+        "Carter": 29,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z42"]
+    },
+    {
+        "Forte": "6-14A",
+        "Prime form": [0,1,3,4,5,8],
+        "Interval vector": [3,2,3,4,3,0],
+        "Carter": 3,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-14B",
+        "Prime form": [0,3,4,5,7,8],
+        "Interval vector": [3,2,3,4,3,0],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-15A",
+        "Prime form": [0,1,2,4,5,8],
+        "Interval vector": [3,2,3,4,2,1],
+        "Carter": 13,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-15B",
+        "Prime form": [0,3,4,6,7,8],
+        "Interval vector": [3,2,3,4,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-16A",
+        "Prime form": [0,1,4,5,6,8],
+        "Interval vector": [3,2,2,4,3,1],
+        "Carter": 11,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-16B",
+        "Prime form": [0,2,3,4,7,8],
+        "Interval vector": [3,2,2,4,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z17A",
+        "Prime form": [0,1,2,4,7,8],
+        "Interval vector": [3,2,2,3,3,2],
+        "Carter": 35,
+        "Possible spacings": ["all-trichord hexachord"],
+        "Forte Complement": ["6-z43B"]
+    },
+    {
+        "Forte": "6-z17B",
+        "Prime form": [0,1,4,6,7,8],
+        "Interval vector": [3,2,2,3,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z43A"]
+    },
+    {
+        "Forte": "6-18A",
+        "Prime form": [0,1,2,5,7,8],
+        "Interval vector": [3,2,2,2,4,2],
+        "Carter": 17,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-18B",
+        "Prime form": [0,1,3,6,7,8],
+        "Interval vector": [3,2,2,2,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z19A",
+        "Prime form": [0,1,3,4,7,8],
+        "Interval vector": [3,1,3,4,3,1],
+        "Carter": 37,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z44B"]
+    },
+    {
+        "Forte": "6-z19B",
+        "Prime form": [0,1,4,5,7,8],
+        "Interval vector": [3,1,3,4,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z44A"]
+    },
+    {
+        "Forte": "6-20",
+        "Prime form": [0,1,4,5,8,9],
+        "Interval vector": [3,0,3,6,3,0],
+        "Carter": 2,
+        "Possible spacings": ["Ode-to-Napoleon hexachord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-21A",
+        "Prime form": [0,2,3,4,6,8],
+        "Interval vector": [2,4,2,4,1,2],
+        "Carter": 12,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-21B",
+        "Prime form": [0,2,4,5,6,8],
+        "Interval vector": [2,4,2,4,1,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-22A",
+        "Prime form": [0,1,2,4,6,8],
+        "Interval vector": [2,4,1,4,2,2],
+        "Carter": 10,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-22B",
+        "Prime form": [0,2,4,6,7,8],
+        "Interval vector": [2,4,1,4,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z23",
+        "Prime form": [0,2,3,5,6,8],
+        "Interval vector": [2,3,4,2,2,2],
+        "Carter": 27,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z45"]
+    },
+    {
+        "Forte": "6-z24A",
+        "Prime form": [0,1,3,4,6,8],
+        "Interval vector": [2,3,3,3,3,1],
+        "Carter": 39,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z46B"]
+    },
+    {
+        "Forte": "6-z24B",
+        "Prime form": [0,2,4,5,7,8],
+        "Interval vector": [2,3,3,3,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z46A"]
+    },
+    {
+        "Forte": "6-z25A",
+        "Prime form": [0,1,3,5,6,8],
+        "Interval vector": [2,3,3,2,4,1],
+        "Carter": 43,
+        "Possible spacings": ["Major eleventh chord"],
+        "Forte Complement": ["6-z47B"]
+    },
+    {
+        "Forte": "6-z25B",
+        "Prime form": [0,2,3,5,7,8],
+        "Interval vector": [2,3,3,2,4,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z47A"]
+    },
+    {
+        "Forte": "6-z26",
+        "Prime form": [0,1,3,5,7,8],
+        "Interval vector": [2,3,2,3,4,1],
+        "Carter": 26,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z48"]
+    },
+    {
+        "Forte": "6-27A",
+        "Prime form": [0,1,3,4,6,9],
+        "Interval vector": [2,2,5,2,2,2],
+        "Carter": 14,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-27B",
+        "Prime form": [0,3,5,6,8,9],
+        "Interval vector": [2,2,5,2,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-z28",
+        "Prime form": [0,1,3,5,6,9],
+        "Interval vector": [2,2,4,3,2,2],
+        "Carter": 21,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z49"]
+    },
+    {
+        "Forte": "6-z29",
+        "Prime form": [0,2,3,6,7,9],
+        "Interval vector": [2,2,4,2,3,2],
+        "Carter": 32,
+        "Possible spacings": ["Bridge chord"],
+        "Forte Complement": ["6-z50"]
+    },
+    {
+        "Forte": "6-30A",
+        "Prime form": [0,1,3,6,7,9],
+        "Interval vector": [2,2,4,2,2,3],
+        "Carter": 15,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-30B",
+        "Prime form": [0,2,3,6,8,9],
+        "Interval vector": [2,2,4,2,2,3],
+        "Carter": null,
+        "Possible spacings": ["Petrushka chord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-31A",
+        "Prime form": [0,1,4,5,7,9],
+        "Interval vector": [2,2,3,4,3,1],
+        "Carter": 8,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-31B",
+        "Prime form": [0,2,4,5,8,9],
+        "Interval vector": [2,2,3,4,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-32",
+        "Prime form": [0,2,4,5,7,9],
+        "Interval vector": [1,4,3,2,5,0],
+        "Carter": 6,
+        "Possible spacings": ["diatonic hexachord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-33A",
+        "Prime form": [0,2,3,5,7,9],
+        "Interval vector": [1,4,3,2,4,1],
+        "Carter": 18,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-33B",
+        "Prime form": [0,2,4,6,7,9],
+        "Interval vector": [1,4,3,2,4,1],
+        "Carter": null,
+        "Possible spacings": ["Dominant eleventh chord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-34A",
+        "Prime form": [0,1,3,5,7,9],
+        "Interval vector": [1,4,2,4,2,2],
+        "Carter": 9,
+        "Possible spacings": ["mystic chord"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-34B",
+        "Prime form": [0,2,4,6,8,9],
+        "Interval vector": [1,4,2,4,2,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "6-35",
+        "Prime form": [0,2,4,6,8,"T"],
+        "Interval vector": [0,6,0,6,0,3],
+        "Carter": 1,
+        "Possible spacings": ["whole tone scale"],
+        "Forte Complement": []
+    },
+    {
+        "Forte": "12-1",
+        "Prime form": [0,1,2,3,4,5,6,7,8,9,"T","E"],
+        "Interval vector": ["C","C","C","C","C",6],
+        "Carter": null,
+        "Possible spacings": ["aggregate"],
+        "Forte Complement": ["0-1"]
+    },
+    {
+        "Forte": "11-1",
+        "Prime form": [0,1,2,3,4,5,6,7,8,9,"T"],
+        "Interval vector": ["T","T","T","T","T",5],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["1-1"]
+    },
+    {
+        "Forte": "10-1",
+        "Prime form": [0,1,2,3,4,5,6,7,8,9],
+        "Interval vector": [9,8,8,8,8,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-1"]
+    },
+    {
+        "Forte": "10-2",
+        "Prime form": [0,1,2,3,4,5,6,7,8,"T"],
+        "Interval vector": [8,9,8,8,8,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-2"]
+    },
+    {
+        "Forte": "10-3",
+        "Prime form": [0,1,2,3,4,5,6,7,9,"T"],
+        "Interval vector": [8,8,9,8,8,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-3"]
+    },
+    {
+        "Forte": "10-4",
+        "Prime form": [0,1,2,3,4,5,6,8,9,"T"],
+        "Interval vector": [8,8,8,9,8,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-4"]
+    },
+    {
+        "Forte": "10-5",
+        "Prime form": [0,1,2,3,4,5,7,8,9,"T"],
+        "Interval vector": [8,8,8,8,9,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-5"]
+    },
+    {
+        "Forte": "10-6",
+        "Prime form": [0,1,2,3,4,6,7,8,9,"T"],
+        "Interval vector": [8,8,8,8,8,5],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["2-6"]
+    },
+    {
+        "Forte": "9-1",
+        "Prime form": [0,1,2,3,4,5,6,7,8],
+        "Interval vector": [8,7,6,6,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-1"]
+    },
+    {
+        "Forte": "9-2A",
+        "Prime form": [0,1,2,3,4,5,6,7,9],
+        "Interval vector": [7,7,7,6,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-2A"]
+    },
+    {
+        "Forte": "9-2B",
+        "Prime form": [0,2,3,4,5,6,7,8,9],
+        "Interval vector": [7,7,7,6,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-2B"]
+    },
+    {
+        "Forte": "9-3B",
+        "Prime form": [0,1,3,4,5,6,7,8,9],
+        "Interval vector": [7,6,7,7,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-3A"]
+    },
+    {
+        "Forte": "9-3A",
+        "Prime form": [0,1,2,3,4,5,6,8,9],
+        "Interval vector": [7,6,7,7,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-3B"]
+    },
+    {
+        "Forte": "9-4B",
+        "Prime form": [0,1,2,4,5,6,7,8,9],
+        "Interval vector": [7,6,6,7,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-4A"]
+    },
+    {
+        "Forte": "9-4A",
+        "Prime form": [0,1,2,3,4,5,7,8,9],
+        "Interval vector": [7,6,6,7,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-4B"]
+    },
+    {
+        "Forte": "9-5B",
+        "Prime form": [0,1,2,3,5,6,7,8,9],
+        "Interval vector": [7,6,6,6,7,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-5A"]
+    },
+    {
+        "Forte": "9-5A",
+        "Prime form": [0,1,2,3,4,6,7,8,9],
+        "Interval vector": [7,6,6,6,7,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-5B"]
+    },
+    {
+        "Forte": "9-6",
+        "Prime form": [0,1,2,3,4,5,6,8,"T"],
+        "Interval vector": [6,8,6,7,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-6"]
+    },
+    {
+        "Forte": "9-7B",
+        "Prime form": [0,1,2,3,4,5,7,9,"T"],
+        "Interval vector": [6,7,7,6,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-7A"]
+    },
+    {
+        "Forte": "9-7A",
+        "Prime form": [0,1,2,3,4,5,7,8,"T"],
+        "Interval vector": [6,7,7,6,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-7B"]
+    },
+    {
+        "Forte": "9-8B",
+        "Prime form": [0,1,2,3,4,6,8,9,"T"],
+        "Interval vector": [6,7,6,7,6,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-8A"]
+    },
+    {
+        "Forte": "9-8A",
+        "Prime form": [0,1,2,3,4,6,7,8,"T"],
+        "Interval vector": [6,7,6,7,6,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-8B"]
+    },
+    {
+        "Forte": "9-9",
+        "Prime form": [0,1,2,3,5,6,7,8,"T"],
+        "Interval vector": [6,7,6,6,8,3],
+        "Carter": null,
+        "Possible spacings": ["blues scale"],
+        "Forte Complement": ["3-9"]
+    },
+    {
+        "Forte": "9-10",
+        "Prime form": [0,1,2,3,4,6,7,9,"T"],
+        "Interval vector": [6,6,8,6,6,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-10"]
+    },
+    {
+        "Forte": "9-11B",
+        "Prime form": [0,1,2,3,5,6,8,9,"T"],
+        "Interval vector": [6,6,7,7,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-11A"]
+    },
+    {
+        "Forte": "9-11A",
+        "Prime form": [0,1,2,3,5,6,7,9,"T"],
+        "Interval vector": [6,6,7,7,7,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-11B"]
+    },
+    {
+        "Forte": "9-12",
+        "Prime form": [0,1,2,4,5,6,8,9,"T"],
+        "Interval vector": [6,6,6,9,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["3-12"]
+    },
+    {
+        "Forte": "8-1",
+        "Prime form": [0,1,2,3,4,5,6,7],
+        "Interval vector": [7,6,5,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-1"]
+    },
+    {
+        "Forte": "8-2B",
+        "Prime form": [0,2,3,4,5,6,7,8],
+        "Interval vector": [6,6,5,5,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-2A"]
+    },
+    {
+        "Forte": "8-2A",
+        "Prime form": [0,1,2,3,4,5,6,8],
+        "Interval vector": [6,6,5,5,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-2B"]
+    },
+    {
+        "Forte": "8-3",
+        "Prime form": [0,1,2,3,4,5,6,9],
+        "Interval vector": [6,5,6,5,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-3"]
+    },
+    {
+        "Forte": "8-4B",
+        "Prime form": [0,1,3,4,5,6,7,8],
+        "Interval vector": [6,5,5,5,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-4A"]
+    },
+    {
+        "Forte": "8-4A",
+        "Prime form": [0,1,2,3,4,5,7,8],
+        "Interval vector": [6,5,5,5,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-4B"]
+    },
+    {
+        "Forte": "8-5B",
+        "Prime form": [0,1,2,4,5,6,7,8],
+        "Interval vector": [6,5,4,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-5A"]
+    },
+    {
+        "Forte": "8-5A",
+        "Prime form": [0,1,2,3,4,6,7,8],
+        "Interval vector": [6,5,4,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-5B"]
+    },
+    {
+        "Forte": "8-6",
+        "Prime form": [0,1,2,3,5,6,7,8],
+        "Interval vector": [6,5,4,4,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-6"]
+    },
+    {
+        "Forte": "8-7",
+        "Prime form": [0,1,2,3,4,5,8,9],
+        "Interval vector": [6,4,5,6,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-7"]
+    },
+    {
+        "Forte": "8-8",
+        "Prime form": [0,1,2,3,4,7,8,9],
+        "Interval vector": [6,4,4,5,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-8"]
+    },
+    {
+        "Forte": "8-9",
+        "Prime form": [0,1,2,3,6,7,8,9],
+        "Interval vector": [6,4,4,4,6,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-9"]
+    },
+    {
+        "Forte": "8-10",
+        "Prime form": [0,2,3,4,5,6,7,9],
+        "Interval vector": [5,6,6,4,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-10"]
+    },
+    {
+        "Forte": "8-11B",
+        "Prime form": [0,2,4,5,6,7,8,9],
+        "Interval vector": [5,6,5,5,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-11A"]
+    },
+    {
+        "Forte": "8-11A",
+        "Prime form": [0,1,2,3,4,5,7,9],
+        "Interval vector": [5,6,5,5,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-11B"]
+    },
+    {
+        "Forte": "8-12A",
+        "Prime form": [0,1,3,4,5,6,7,9],
+        "Interval vector": [5,5,6,5,4,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-12A"]
+    },
+    {
+        "Forte": "8-12B",
+        "Prime form": [0,2,3,4,5,6,8,9],
+        "Interval vector": [5,5,6,5,4,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-12B"]
+    },
+    {
+        "Forte": "8-13B",
+        "Prime form": [0,2,3,5,6,7,8,9],
+        "Interval vector": [5,5,6,4,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-13A"]
+    },
+    {
+        "Forte": "8-13A",
+        "Prime form": [0,1,2,3,4,6,7,9],
+        "Interval vector": [5,5,6,4,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-13B"]
+    },
+    {
+        "Forte": "8-14A",
+        "Prime form": [0,1,2,4,5,6,7,9],
+        "Interval vector": [5,5,5,5,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-14A"]
+    },
+    {
+        "Forte": "8-14B",
+        "Prime form": [0,2,3,4,5,7,8,9],
+        "Interval vector": [5,5,5,5,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-14B"]
+    },
+    {
+        "Forte": "8-z15B",
+        "Prime form": [0,1,3,5,6,7,8,9],
+        "Interval vector": [5,5,5,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-z15A"]
+    },
+    {
+        "Forte": "8-z15A",
+        "Prime form": [0,1,2,3,4,6,8,9],
+        "Interval vector": [5,5,5,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-z15B"]
+    },
+    {
+        "Forte": "8-16B",
+        "Prime form": [0,1,2,4,6,7,8,9],
+        "Interval vector": [5,5,4,5,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-16A"]
+    },
+    {
+        "Forte": "8-16A",
+        "Prime form": [0,1,2,3,5,7,8,9],
+        "Interval vector": [5,5,4,5,6,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-16B"]
+    },
+    {
+        "Forte": "8-17",
+        "Prime form": [0,1,3,4,5,6,8,9],
+        "Interval vector": [5,4,6,6,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-17"]
+    },
+    {
+        "Forte": "8-18B",
+        "Prime form": [0,1,3,4,6,7,8,9],
+        "Interval vector": [5,4,6,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-18A"]
+    },
+    {
+        "Forte": "8-18A",
+        "Prime form": [0,1,2,3,5,6,8,9],
+        "Interval vector": [5,4,6,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-18B"]
+    },
+    {
+        "Forte": "8-19B",
+        "Prime form": [0,1,3,4,5,7,8,9],
+        "Interval vector": [5,4,5,7,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-19A"]
+    },
+    {
+        "Forte": "8-19A",
+        "Prime form": [0,1,2,4,5,6,8,9],
+        "Interval vector": [5,4,5,7,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-19B"]
+    },
+    {
+        "Forte": "8-20",
+        "Prime form": [0,1,2,4,5,7,8,9],
+        "Interval vector": [5,4,5,6,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-20"]
+    },
+    {
+        "Forte": "8-21",
+        "Prime form": [0,1,2,3,4,6,8,"T"],
+        "Interval vector": [4,7,4,6,4,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-21"]
+    },
+    {
+        "Forte": "8-22B",
+        "Prime form": [0,1,2,3,5,7,9,"T"],
+        "Interval vector": [4,6,5,5,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-22A"]
+    },
+    {
+        "Forte": "8-22A",
+        "Prime form": [0,1,2,3,5,6,8,"T"],
+        "Interval vector": [4,6,5,5,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-22B"]
+    },
+    {
+        "Forte": "8-23",
+        "Prime form": [0,1,2,3,5,7,8,"T"],
+        "Interval vector": [4,6,5,4,7,2],
+        "Carter": null,
+        "Possible spacings": ["bebop scale"],
+        "Forte Complement": ["4-23"]
+    },
+    {
+        "Forte": "8-24",
+        "Prime form": [0,1,2,4,5,6,8,"T"],
+        "Interval vector": [4,6,4,7,4,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-24"]
+    },
+    {
+        "Forte": "8-25",
+        "Prime form": [0,1,2,4,6,7,8,"T"],
+        "Interval vector": [4,6,4,6,4,4],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-25"]
+    },
+    {
+        "Forte": "8-26",
+        "Prime form": [0,1,3,4,5,7,8,"T"],
+        "Interval vector": [4,5,6,5,6,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-26"]
+    },
+    {
+        "Forte": "8-27B",
+        "Prime form": [0,1,2,4,6,7,9,"T"],
+        "Interval vector": [4,5,6,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-27A"]
+    },
+    {
+        "Forte": "8-27A",
+        "Prime form": [0,1,2,4,5,7,8,"T"],
+        "Interval vector": [4,5,6,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-27B"]
+    },
+    {
+        "Forte": "8-28",
+        "Prime form": [0,1,3,4,6,7,9,"T"],
+        "Interval vector": [4,4,8,4,4,4],
+        "Carter": null,
+        "Possible spacings": ["octatonic scale"],
+        "Forte Complement": ["4-28"]
+    },
+    {
+        "Forte": "8-z29B",
+        "Prime form": [0,2,3,4,6,7,8,9],
+        "Interval vector": [5,5,5,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-z29A"]
+    },
+    {
+        "Forte": "8-z29A",
+        "Prime form": [0,1,2,3,5,6,7,9],
+        "Interval vector": [5,5,5,5,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["4-z29B"]
+    },
+    {
+        "Forte": "7-1",
+        "Prime form": [0,1,2,3,4,5,6],
+        "Interval vector": [6,5,4,3,2,1],
+        "Carter": 1,
+        "Possible spacings": [],
+        "Forte Complement": ["5-1"]
+    },
+    {
+        "Forte": "7-2B",
+        "Prime form": [0,2,3,4,5,6,7],
+        "Interval vector": [5,5,4,3,3,1],
+        "Carter": 11,
+        "Possible spacings": [],
+        "Forte Complement": ["5-2A"]
+    },
+    {
+        "Forte": "7-2A",
+        "Prime form": [0,1,2,3,4,5,7],
+        "Interval vector": [5,5,4,3,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-2B"]
+    },
+    {
+        "Forte": "7-3B",
+        "Prime form": [0,3,4,5,6,7,8],
+        "Interval vector": [5,4,4,4,3,1],
+        "Carter": 14,
+        "Possible spacings": [],
+        "Forte Complement": ["5-3A"]
+    },
+    {
+        "Forte": "7-3A",
+        "Prime form": [0,1,2,3,4,5,8],
+        "Interval vector": [5,4,4,4,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-3B"]
+    },
+    {
+        "Forte": "7-4B",
+        "Prime form": [0,1,3,4,5,6,7],
+        "Interval vector": [5,4,4,3,3,2],
+        "Carter": 12,
+        "Possible spacings": [],
+        "Forte Complement": ["5-4A"]
+    },
+    {
+        "Forte": "7-4A",
+        "Prime form": [0,1,2,3,4,6,7],
+        "Interval vector": [5,4,4,3,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-4B"]
+    },
+    {
+        "Forte": "7-5B",
+        "Prime form": [0,1,2,4,5,6,7],
+        "Interval vector": [5,4,3,3,4,2],
+        "Carter": 13,
+        "Possible spacings": [],
+        "Forte Complement": ["5-5A"]
+    },
+    {
+        "Forte": "7-5A",
+        "Prime form": [0,1,2,3,5,6,7],
+        "Interval vector": [5,4,3,3,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-5B"]
+    },
+    {
+        "Forte": "7-6B",
+        "Prime form": [0,1,4,5,6,7,8],
+        "Interval vector": [5,3,3,4,4,2],
+        "Carter": 27,
+        "Possible spacings": [],
+        "Forte Complement": ["5-6A"]
+    },
+    {
+        "Forte": "7-6A",
+        "Prime form": [0,1,2,3,4,7,8],
+        "Interval vector": [5,3,3,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-6B"]
+    },
+    {
+        "Forte": "7-7B",
+        "Prime form": [0,1,2,5,6,7,8],
+        "Interval vector": [5,3,2,3,5,3],
+        "Carter": 30,
+        "Possible spacings": [],
+        "Forte Complement": ["5-7A"]
+    },
+    {
+        "Forte": "7-7A",
+        "Prime form": [0,1,2,3,6,7,8],
+        "Interval vector": [5,3,2,3,5,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-7B"]
+    },
+    {
+        "Forte": "7-8",
+        "Prime form": [0,2,3,4,5,6,8],
+        "Interval vector": [4,5,4,4,2,2],
+        "Carter": 2,
+        "Possible spacings": [],
+        "Forte Complement": ["5-8"]
+    },
+    {
+        "Forte": "7-9B",
+        "Prime form": [0,2,4,5,6,7,8],
+        "Interval vector": [4,5,3,4,3,2],
+        "Carter": 15,
+        "Possible spacings": [],
+        "Forte Complement": ["5-9A"]
+    },
+    {
+        "Forte": "7-9A",
+        "Prime form": [0,1,2,3,4,6,8],
+        "Interval vector": [4,5,3,4,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-9B"]
+    },
+    {
+        "Forte": "7-10B",
+        "Prime form": [0,2,3,4,5,6,9],
+        "Interval vector": [4,4,5,3,3,2],
+        "Carter": 19,
+        "Possible spacings": [],
+        "Forte Complement": ["5-10A"]
+    },
+    {
+        "Forte": "7-10A",
+        "Prime form": [0,1,2,3,4,6,9],
+        "Interval vector": [4,4,5,3,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-10B"]
+    },
+    {
+        "Forte": "7-11B",
+        "Prime form": [0,2,3,4,5,7,8],
+        "Interval vector": [4,4,4,4,4,1],
+        "Carter": 18,
+        "Possible spacings": [],
+        "Forte Complement": ["5-11A"]
+    },
+    {
+        "Forte": "7-11A",
+        "Prime form": [0,1,3,4,5,6,8],
+        "Interval vector": [4,4,4,4,4,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-11B"]
+    },
+    {
+        "Forte": "7-z12",
+        "Prime form": [0,1,2,3,4,7,9],
+        "Interval vector": [4,4,4,3,4,2],
+        "Carter": 5,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z12"]
+    },
+    {
+        "Forte": "7-13B",
+        "Prime form": [0,2,3,4,6,7,8],
+        "Interval vector": [4,4,3,5,3,2],
+        "Carter": 17,
+        "Possible spacings": [],
+        "Forte Complement": ["5-13A"]
+    },
+    {
+        "Forte": "7-13A",
+        "Prime form": [0,1,2,4,5,6,8],
+        "Interval vector": [4,4,3,5,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-13B"]
+    },
+    {
+        "Forte": "7-14B",
+        "Prime form": [0,1,3,5,6,7,8],
+        "Interval vector": [4,4,3,3,5,2],
+        "Carter": 28,
+        "Possible spacings": [],
+        "Forte Complement": ["5-14A"]
+    },
+    {
+        "Forte": "7-14A",
+        "Prime form": [0,1,2,3,5,7,8],
+        "Interval vector": [4,4,3,3,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-14B"]
+    },
+    {
+        "Forte": "7-15",
+        "Prime form": [0,1,2,4,6,7,8],
+        "Interval vector": [4,4,2,4,4,3],
+        "Carter": 4,
+        "Possible spacings": [],
+        "Forte Complement": ["5-15"]
+    },
+    {
+        "Forte": "7-16B",
+        "Prime form": [0,1,3,4,5,6,9],
+        "Interval vector": [4,3,5,4,3,2],
+        "Carter": 20,
+        "Possible spacings": [],
+        "Forte Complement": ["5-16A"]
+    },
+    {
+        "Forte": "7-16A",
+        "Prime form": [0,1,2,3,5,6,9],
+        "Interval vector": [4,3,5,4,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-16B"]
+    },
+    {
+        "Forte": "7-z17",
+        "Prime form": [0,1,2,4,5,6,9],
+        "Interval vector": [4,3,4,5,4,1],
+        "Carter": 10,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z17"]
+    },
+    {
+        "Forte": "7-z18A",
+        "Prime form": [0,1,4,5,6,7,9],
+        "Interval vector": [4,3,4,4,4,2],
+        "Carter": 35,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z18A"]
+    },
+    {
+        "Forte": "7-z18B",
+        "Prime form": [0,1,4,6,7,8,9],
+        "Interval vector": [4,3,4,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z18B"]
+    },
+    {
+        "Forte": "7-19B",
+        "Prime form": [0,1,2,3,6,8,9],
+        "Interval vector": [4,3,4,3,4,3],
+        "Carter": 31,
+        "Possible spacings": [],
+        "Forte Complement": ["5-19A"]
+    },
+    {
+        "Forte": "7-19A",
+        "Prime form": [0,1,2,3,6,7,9],
+        "Interval vector": [4,3,4,3,4,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-19B"]
+    },
+    {
+        "Forte": "7-20B",
+        "Prime form": [0,1,2,5,7,8,9],
+        "Interval vector": [4,3,3,4,5,2],
+        "Carter": 34,
+        "Possible spacings": [],
+        "Forte Complement": ["5-20A"]
+    },
+    {
+        "Forte": "7-20A",
+        "Prime form": [0,1,2,5,6,7,9],
+        "Interval vector": [4,3,3,4,5,2],
+        "Carter": null,
+        "Possible spacings": ["Persian scale"],
+        "Forte Complement": ["5-20B"]
+    },
+    {
+        "Forte": "7-21B",
+        "Prime form": [0,1,3,4,5,8,9],
+        "Interval vector": [4,2,4,6,4,1],
+        "Carter": 21,
+        "Possible spacings": [],
+        "Forte Complement": ["5-21A"]
+    },
+    {
+        "Forte": "7-21A",
+        "Prime form": [0,1,2,4,5,8,9],
+        "Interval vector": [4,2,4,6,4,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-21B"]
+    },
+    {
+        "Forte": "7-22",
+        "Prime form": [0,1,2,5,6,8,9],
+        "Interval vector": [4,2,4,5,4,2],
+        "Carter": 8,
+        "Possible spacings": ["double harmonic scale"],
+        "Forte Complement": ["5-22"]
+    },
+    {
+        "Forte": "7-23B",
+        "Prime form": [0,2,4,5,6,7,9],
+        "Interval vector": [3,5,4,3,5,1],
+        "Carter": 25,
+        "Possible spacings": [],
+        "Forte Complement": ["5-23A"]
+    },
+    {
+        "Forte": "7-23A",
+        "Prime form": [0,2,3,4,5,7,9],
+        "Interval vector": [3,5,4,3,5,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-23B"]
+    },
+    {
+        "Forte": "7-24B",
+        "Prime form": [0,2,4,6,7,8,9],
+        "Interval vector": [3,5,3,4,4,2],
+        "Carter": 22,
+        "Possible spacings": ["enigmatic scale"],
+        "Forte Complement": ["5-24A"]
+    },
+    {
+        "Forte": "7-24A",
+        "Prime form": [0,1,2,3,5,7,9],
+        "Interval vector": [3,5,3,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-24B"]
+    },
+    {
+        "Forte": "7-25B",
+        "Prime form": [0,2,3,5,6,7,9],
+        "Interval vector": [3,4,5,3,4,2],
+        "Carter": 24,
+        "Possible spacings": [],
+        "Forte Complement": ["5-25A"]
+    },
+    {
+        "Forte": "7-25A",
+        "Prime form": [0,2,3,4,6,7,9],
+        "Interval vector": [3,4,5,3,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-25B"]
+    },
+    {
+        "Forte": "7-26A",
+        "Prime form": [0,1,3,4,5,7,9],
+        "Interval vector": [3,4,4,5,3,2],
+        "Carter": 26,
+        "Possible spacings": [],
+        "Forte Complement": ["5-26A"]
+    },
+    {
+        "Forte": "7-26B",
+        "Prime form": [0,2,4,5,6,8,9],
+        "Interval vector": [3,4,4,5,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-26B"]
+    },
+    {
+        "Forte": "7-27B",
+        "Prime form": [0,2,4,5,7,8,9],
+        "Interval vector": [3,4,4,4,5,1],
+        "Carter": 23,
+        "Possible spacings": [],
+        "Forte Complement": ["5-27A"]
+    },
+    {
+        "Forte": "7-27A",
+        "Prime form": [0,1,2,4,5,7,9],
+        "Interval vector": [3,4,4,4,5,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-27B"]
+    },
+    {
+        "Forte": "7-28A",
+        "Prime form": [0,1,3,5,6,7,9],
+        "Interval vector": [3,4,4,4,3,3],
+        "Carter": 36,
+        "Possible spacings": [],
+        "Forte Complement": ["5-28A"]
+    },
+    {
+        "Forte": "7-28B",
+        "Prime form": [0,2,3,4,6,8,9],
+        "Interval vector": [3,4,4,4,3,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-28B"]
+    },
+    {
+        "Forte": "7-29B",
+        "Prime form": [0,2,3,5,7,8,9],
+        "Interval vector": [3,4,4,3,5,2],
+        "Carter": 32,
+        "Possible spacings": [],
+        "Forte Complement": ["5-29A"]
+    },
+    {
+        "Forte": "7-29A",
+        "Prime form": [0,1,2,4,6,7,9],
+        "Interval vector": [3,4,4,3,5,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-29B"]
+    },
+    {
+        "Forte": "7-30B",
+        "Prime form": [0,1,3,5,7,8,9],
+        "Interval vector": [3,4,3,5,4,2],
+        "Carter": 37,
+        "Possible spacings": [],
+        "Forte Complement": ["5-30A"]
+    },
+    {
+        "Forte": "7-30A",
+        "Prime form": [0,1,2,4,6,8,9],
+        "Interval vector": [3,4,3,5,4,2],
+        "Carter": null,
+        "Possible spacings": ["minor Neapolitan scale"],
+        "Forte Complement": ["5-30B"]
+    },
+    {
+        "Forte": "7-31B",
+        "Prime form": [0,1,3,4,6,8,9],
+        "Interval vector": [3,3,6,3,3,3],
+        "Carter": 38,
+        "Possible spacings": ["harmonic minor scale"],
+        "Forte Complement": ["5-31A"]
+    },
+    {
+        "Forte": "7-31A",
+        "Prime form": [0,2,3,5,6,8,9],
+        "Interval vector": [3,3,6,3,3,3],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-31B"]
+    },
+    {
+        "Forte": "7-32B",
+        "Prime form": [0,1,3,5,6,8,9],
+        "Interval vector": [3,3,5,4,4,2],
+        "Carter": 33,
+        "Possible spacings": ["harmonic major scale"],
+        "Forte Complement": ["5-32A"]
+    },
+    {
+        "Forte": "7-32A",
+        "Prime form": [0,1,3,4,6,7,9],
+        "Interval vector": [3,3,5,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-32B"]
+    },
+    {
+        "Forte": "7-33",
+        "Prime form": [0,1,2,4,6,8,"T"],
+        "Interval vector": [2,6,2,6,2,3],
+        "Carter": 6,
+        "Possible spacings": ["M Locrian scale"],
+        "Forte Complement": ["5-33"]
+    },
+    {
+        "Forte": "7-34",
+        "Prime form": [0,1,3,4,6,8,"T"],
+        "Interval vector": [2,5,4,4,4,2],
+        "Carter": 9,
+        "Possible spacings": ["half dim. scale"],
+        "Forte Complement": ["5-34"]
+    },
+    {
+        "Forte": "7-35",
+        "Prime form": [0,1,3,5,6,8,"T"],
+        "Interval vector": [2,5,4,3,6,1],
+        "Carter": 7,
+        "Possible spacings": ["diatonic scale"],
+        "Forte Complement": ["5-35"]
+    },
+    {
+        "Forte": "7-z36B",
+        "Prime form": [0,2,3,5,6,7,8],
+        "Interval vector": [4,4,4,3,4,2],
+        "Carter": 16,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z36A"]
+    },
+    {
+        "Forte": "7-z36A",
+        "Prime form": [0,1,2,3,5,6,8],
+        "Interval vector": [4,4,4,3,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z36B"]
+    },
+    {
+        "Forte": "7-z37",
+        "Prime form": [0,1,3,4,5,7,8],
+        "Interval vector": [4,3,4,5,4,1],
+        "Carter": 3,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z37"]
+    },
+    {
+        "Forte": "7-z38B",
+        "Prime form": [0,1,3,4,6,7,8],
+        "Interval vector": [4,3,4,4,4,2],
+        "Carter": 29,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z38A"]
+    },
+    {
+        "Forte": "7-z38A",
+        "Prime form": [0,1,2,4,5,7,8],
+        "Interval vector": [4,3,4,4,4,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["5-z38B","6-1","6-2A","6-2B"]
+    },
+    {
+        "Forte": "6-z36B",
+        "Prime form": [0,3,4,5,6,7],
+        "Interval vector": [4,3,3,2,2,1],
+        "Carter": 50,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z3A"]
+    },
+    {
+        "Forte": "6-z36A",
+        "Prime form": [0,1,2,3,4,7],
+        "Interval vector": [4,3,3,2,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z3B"]
+    },
+    {
+        "Forte": "6-z37",
+        "Prime form": [0,1,2,3,4,8],
+        "Interval vector": [4,3,2,3,2,1],
+        "Carter": 23,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z4","6-5A","6-5B"]
+    },
+    {
+        "Forte": "6-z38",
+        "Prime form": [0,1,2,3,7,8],
+        "Interval vector": [4,2,1,2,4,2],
+        "Carter": 34,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z6","6-7","6-8","6-9A","6-9B"]
+    },
+    {
+        "Forte": "6-z39B",
+        "Prime form": [0,3,4,5,6,8],
+        "Interval vector": [3,3,3,3,2,1],
+        "Carter": 41,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z10A"]
+    },
+    {
+        "Forte": "6-z39A",
+        "Prime form": [0,2,3,4,5,8],
+        "Interval vector": [3,3,3,3,2,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z10B"]
+    },
+    {
+        "Forte": "6-z40B",
+        "Prime form": [0,3,5,6,7,8],
+        "Interval vector": [3,3,3,2,3,1],
+        "Carter": 48,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z11A"]
+    },
+    {
+        "Forte": "6-z40A",
+        "Prime form": [0,1,2,3,5,8],
+        "Interval vector": [3,3,3,2,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z11B"]
+    },
+    {
+        "Forte": "6-z41B",
+        "Prime form": [0,2,5,6,7,8],
+        "Interval vector": [3,3,2,2,3,2],
+        "Carter": 45,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z12A"]
+    },
+    {
+        "Forte": "6-z41A",
+        "Prime form": [0,1,2,3,6,8],
+        "Interval vector": [3,3,2,2,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z12B"]
+    },
+    {
+        "Forte": "6-z42",
+        "Prime form": [0,1,2,3,6,9],
+        "Interval vector": [3,2,4,2,2,2],
+        "Carter": 30,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z13","6-14A","6-14B","6-15A","6-15B","6-16A","6-16B"]
+    },
+    {
+        "Forte": "6-z43B",
+        "Prime form": [0,2,3,6,7,8],
+        "Interval vector": [3,2,2,3,3,2],
+        "Carter": 36,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z17A"]
+    },
+    {
+        "Forte": "6-z43A",
+        "Prime form": [0,1,2,5,6,8],
+        "Interval vector": [3,2,2,3,3,2],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z17B","6-18A","6-18B"]
+    },
+    {
+        "Forte": "6-z44B",
+        "Prime form": [0,3,4,7,8,9],
+        "Interval vector": [3,1,3,4,3,1],
+        "Carter": 38,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z19A"]
+    },
+    {
+        "Forte": "6-z44A",
+        "Prime form": [0,1,2,5,6,9],
+        "Interval vector": [3,1,3,4,3,1],
+        "Carter": null,
+        "Possible spacings": ["Schoenberg hexachord"],
+        "Forte Complement": ["6-z19B","6-20","6-21A","6-21B","6-22A","6-22B"]
+    },
+    {
+        "Forte": "6-z45",
+        "Prime form": [0,2,3,4,6,9],
+        "Interval vector": [2,3,4,2,2,2],
+        "Carter": 28,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z23"]
+    },
+    {
+        "Forte": "6-z46B",
+        "Prime form": [0,3,5,7,8,9],
+        "Interval vector": [2,3,3,3,3,1],
+        "Carter": 40,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z24A"]
+    },
+    {
+        "Forte": "6-z46A",
+        "Prime form": [0,1,2,4,6,9],
+        "Interval vector": [2,3,3,3,3,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z24B"]
+    },
+    {
+        "Forte": "6-z47B",
+        "Prime form": [0,2,5,7,8,9],
+        "Interval vector": [2,3,3,2,4,1],
+        "Carter": 44,
+        "Possible spacings": ["blues scale"],
+        "Forte Complement": ["6-z25A"]
+    },
+    {
+        "Forte": "6-z47A",
+        "Prime form": [0,1,2,4,7,9],
+        "Interval vector": [2,3,3,2,4,1],
+        "Carter": null,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z25B"]
+    },
+    {
+        "Forte": "6-z48",
+        "Prime form": [0,1,2,5,7,9],
+        "Interval vector": [2,3,2,3,4,1],
+        "Carter": 25,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z26","6-27A","6-27B"]
+    },
+    {
+        "Forte": "6-z49",
+        "Prime form": [0,1,3,4,7,9],
+        "Interval vector": [2,2,4,3,2,2],
+        "Carter": 22,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z28"]
+    },
+    {
+        "Forte": "6-z50",
+        "Prime form": [0,1,4,6,7,9],
+        "Interval vector": [2,2,4,2,3,2],
+        "Carter": 31,
+        "Possible spacings": [],
+        "Forte Complement": ["6-z29","6-30A","6-30B","6-31A","6-31B","6-32","6-33A","6-33B","6-34A","6-34B","6-35"]
+    }
+]
