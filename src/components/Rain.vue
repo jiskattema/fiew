@@ -4,6 +4,9 @@
 </template>
 
 <script>
+// Top to bottom is a distance of 100; we want to do this in 10,000 miliseconds
+const SPEED = 100.0 / 10000
+
 var utils = require('../utils')
 var THREE = require('three')
 
@@ -54,14 +57,14 @@ module.exports = {
       this.scene.add(mesh)
     },
 
-    tick () {
+    tick (elapsed) {
       if (playerStatus !== 'initialized') {
         return
       }
 
       var i
       for (i = this.drops.length - 1; i >= 0; i--) {
-        this.drops[i].mesh.position.y -= 0.5
+        this.drops[i].mesh.position.y -= SPEED * elapsed
         if (this.drops[i].mesh.position.y <= 0) {
           this.scene.remove(this.drops[i].mesh)
           this.drops[i].mesh.geometry.dispose()
