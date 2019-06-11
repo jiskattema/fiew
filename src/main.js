@@ -33,6 +33,7 @@ function tick () {
       player.tick.call(player.scope, elapsed)
     }
   })
+  previousTimestamp = currentTimestamp
   setTimeout(tick, nextDelay)
 }
 
