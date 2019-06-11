@@ -32,6 +32,38 @@ export var namesSharp = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
 
+/**
+ * Return a hash containing all possible chords, indexed by primeForm.join('-').
+ *
+ * Carter:            string, chord number as defined by Carter
+ * Forte:             string, chord name as defined by Forte
+ * Forte complement:  string, Forte name of chord complement
+ * Interval vector:   int[6] of Ints, where xi counts
+ *                    the number of intervals of size i
+ * Possible spacings: string[], chord names
+ * Prime form:        int[], prime form of the chord.
+ */
+function buildForteTable () {
+  var list = require('./forte.json')
+  var table = {}
+
+  var i
+  for (i = 0; i < list.length; i++) {
+    var primeForm = list[i]['Prime form']
+    var key = primeForm.join('-')
+    table[key] = list[i]
+  }
+
+  return table
+}
+
+export var forteTable = buildForteTable()
+
+/**
+ * Get an array of currently sounding notes.
+ *
+ * returns: int[], an array containing the MIDI number of active notes
+ */
 function getActiveNotes () {
   var activeNotes = []
   keyStates.forEach((state, i) => {
@@ -42,6 +74,11 @@ function getActiveNotes () {
   return activeNotes
 }
 
+/**
+ * Convert a MIDI note number to a key and octave.
+ *
+ * returns: {octave: int, key: string}
+ */
 export function midiNumberToNote (number) {
   number = 1 * number
   var octave = Math.floor(number / 12)
@@ -52,6 +89,15 @@ export function midiNumberToNote (number) {
   }
 }
 
+/**
+ * Convert an array of MIDI notes in a pitch set.
+ *
+ * params:
+ *   midiNotes: int[], array of MIDI note numbers
+ *              default: the result of getActiveNotes()
+ *
+ * returns: int[], the sorted pitch set.
+ */
 export function getPitchSet (midiNotes) {
   if (!midiNotes) {
     midiNotes = getActiveNotes()
@@ -70,6 +116,15 @@ export function getPitchSet (midiNotes) {
   return form
 }
 
+/**
+ * Count the pitches in an array of MIDI numbers.
+ *
+ * params:
+ *   midiNotes: int[], array of MIDI note numbers
+ *              default: the result of getActiveNotes()
+ *
+ * returns: int[12], the pitch counts set.
+ */
 export function getPitchCount (midiNotes) {
   if (!midiNotes) {
     midiNotes = getActiveNotes()
@@ -85,8 +140,28 @@ export function getPitchCount (midiNotes) {
   return count
 }
 
+/**
+ * Calculate the DFT of a pitch set.
+ *
+ * The pitch set is of the form int[12];
+ * if we consider this a real value function f(x), we can do a discrete
+ * fourier transform to get F(k), a (complex) function over [0, 12].
+ * NOTE: because f(x) is real valued, there are only 6 independent
+ * components to F(k)
+ *
+ * img, real = DFT(pitch)
+ * phases = atan2(img[k], real[k])
+ * radii = sqrt(img[k] ** 2 + real[k] ** 2)
+ *
+ * params:
+ *   int[], array of MIDI notes to analyze
+ *   default: the currently active notes
+ *
+ * returns:
+ *   [float[6], float[6]], phases and radii of the DFT
+ */
 export function getPitchPhases (midiNotes) {
-  var pitches = getPitchCount(midiNotes)
+  var pitches = getPitchCount(midiNotes) // later mapped to [0, 1]
   var real = Array(12).fill(0)
   var img = Array(12).fill(0)
   var phases = Array(12).fill(0)
@@ -106,6 +181,22 @@ export function getPitchPhases (midiNotes) {
   return [phases, radii]
 }
 
+/**
+ * Compare two forms; can be used as sort function.
+ *
+ * Approach:
+ * 1) find the biggest span for each form, where the span
+ * is the number of semitones between the first and the last note.
+ * 2) if the spans are not equal, we're done the smallest span is most
+ * compact. Otherwise, continue with the second largest span etc.
+ * 3) if all spans are identical, compare the pitches one-by-one.
+ * 4) all pitches are indentical, so the forms are identical.
+ *
+ * returns:
+ * -1:  A < B
+ *  0:  A = B
+ *  1:  A > B
+ */
 function compactFormCompare (formA, formB) {
   var spanA
   var spanB
@@ -150,7 +241,24 @@ function printPc (pc) {
   console.log(a)
 }
 
+/**
+ * Get the normal form of a pitch set.
+ *
+ * The normal form is the most compact form; ie. smallest distance
+ * between first and last pitch, with all other pitches in between.
+ *
+ * params:
+ *    int[] pitch set
+ *
+ * returns:
+ *    int[] pitch set in normal form
+ */
 export function getNormalForm (form) {
+  if (form.length === 0) {
+    // needed because else pcs[0] returns undefined
+    return []
+  }
+
   // build all possible permutations from the pitch set
   var length = form.length
   form = form.concat(form)
@@ -167,6 +275,20 @@ export function getNormalForm (form) {
   return pcs[0]
 }
 
+/**
+ * Get the prime form of a pitch set.
+ *
+ * The most compact form of either the normal form, or the
+ * normal form of the inverse.
+ *
+ * params:
+ *    int[] pitch set
+ *
+ * returns: {
+ *    pitches: int[]; pitch set in prime form
+ *    key: string; key of the chord before the transpose to prime form
+ * }
+ */
 export function getPrimeForm (form) {
   var normalForm = getNormalForm(form)
 
@@ -177,20 +299,24 @@ export function getPrimeForm (form) {
   var normalInverted = getNormalForm(inverted)
 
   // transpose to start at zero
-
   var delta
+  var primeForm
   if (compactFormCompare(normalForm, normalInverted) < 0) {
-    delta = normalForm[0]
-    normalForm = normalForm.map(a => a >= delta ? a - delta : 12 + a - delta)
-    return normalForm
+    delta = 0 + normalForm[0]
+    primeForm = normalForm.map(a => a >= delta ? a - delta : 12 + a - delta)
   } else {
-    delta = normalInverted[0]
-    normalInverted = normalInverted.map(a => a >= delta ? a - delta : 12 + a - delta)
-    return normalInverted
+    delta = 0 + normalInverted[0]
+    primeForm = normalInverted.map(a => a >= delta ? a - delta : 12 + a - delta)
+  }
+
+  return {
+    key: names[delta],
+    pitches: primeForm
   }
 }
 
 export default {
+  forteTable: forteTable,
   states: states,
   keyStates: keyStates,
   holdState: holdState,
