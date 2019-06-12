@@ -61,13 +61,16 @@ module.exports = {
 
       two.update()
 
-      var pitchSet = utils.getPitchSet()
-      var prime = utils.getPrimeForm(pitchSet)
+      var ps = utils.getPitchSet()
+      var normal = utils.getNormalForm(ps)
+      var chord = utils.getChord(normal)
 
-      var chord = utils.forteTable[prime.pitches.join('-')]
-      this.chordName = prime.key +
+      this.chordName =
+        chord.key +
         ' ' + chord['Possible spacings'] +
-        ' ' + chord['Forte']
+        'ps: [' + ps.join(',') + '] ' +
+        'normal: <' + normal.join(',') + '> ' +
+        'Forte: ' + chord['Forte']
     }
   },
   mounted () {

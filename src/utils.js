@@ -50,6 +50,14 @@ function buildForteTable () {
   var i
   for (i = 0; i < list.length; i++) {
     var primeForm = list[i]['Prime form']
+    primeForm.map(pc => {
+      if (pc === 'E' || pc === 'e') {
+        return 11
+      } else if (pc === 'T' || pc === 't') {
+        return 10
+      }
+      return parseInt(pc)
+    })
     var key = primeForm.join('-')
     table[key] = list[i]
   }
@@ -253,66 +261,41 @@ function printPc (pc) {
  * returns:
  *    int[] pitch set in normal form
  */
-export function getNormalForm (form) {
-  if (form.length === 0) {
-    // needed because else pcs[0] returns undefined
+export function getNormalForm (ps) {
+  if (ps.length === 0) {
+    // needed because else forms[0] returns undefined
     return []
   }
 
   // build all possible permutations from the pitch set
-  var length = form.length
-  form = form.concat(form)
+  var length = ps.length
+  ps = ps.concat(ps)
 
-  var pcs = []
+  var forms = []
   for (let i = 0; i < length; i++) {
-    pcs.push(form.slice(i, i + length))
+    forms.push(ps.slice(i, i + length))
   }
 
   // sort the form using the compactness criterium
-  pcs.sort(compactFormCompare)
+  forms.sort(compactFormCompare)
 
   // return the most compact form
-  return pcs[0]
+  return forms[0]
 }
 
-/**
- * Get the prime form of a pitch set.
- *
- * The most compact form of either the normal form, or the
- * normal form of the inverse.
- *
- * params:
- *    int[] pitch set
- *
- * returns: {
- *    pitches: int[]; pitch set in prime form
- *    key: string; key of the chord before the transpose to prime form
- * }
- */
-export function getPrimeForm (form) {
-  var normalForm = getNormalForm(form)
-
-  var inverted = form
-    .map(a => a ? 12 - a : 0)
-    .sort((a, b) => a - b)
-
-  var normalInverted = getNormalForm(inverted)
-
-  // transpose to start at zero
-  var delta
-  var primeForm
-  if (compactFormCompare(normalForm, normalInverted) < 0) {
-    delta = 0 + normalForm[0]
-    primeForm = normalForm.map(a => a >= delta ? a - delta : 12 + a - delta)
-  } else {
-    delta = 0 + normalInverted[0]
-    primeForm = normalInverted.map(a => a >= delta ? a - delta : 12 + a - delta)
+export function getChord (form) {
+  if (!form || form.length === 0) {
+    return Object.assign({key: names[0]}, forteTable[0])
   }
 
-  return {
-    key: names[delta],
-    pitches: primeForm
+  // translate form to start at 0
+  var offset = form[0]
+  for (let i = 0; i < form.length; i++) {
+    form[i] -= offset
+    while (form[i] > 12) form[i] -= 12
+    while (form[i] < 0) form[i] += 12
   }
+  return Object.assign({key: names[offset]}, forteTable[form.join('-')])
 }
 
 export default {
@@ -326,10 +309,10 @@ export default {
   namesFlat: namesFlat,
   namesSharp: namesSharp,
   getNormalForm: getNormalForm,
+  getChord: getChord,
   getPitchSet: getPitchSet,
   getPitchPhases: getPitchPhases,
   getPitchCount: getPitchCount,
-  getPrimeForm: getPrimeForm,
   midiNumberToNote: midiNumberToNote,
   printPc: printPc
 }
