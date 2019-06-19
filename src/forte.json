@@ -4,7 +4,12 @@
         "Prime form": [],
         "Interval vector": [0,0,0,0,0,0],
         "Carter": null,
-        "Possible spacings": ["empty set"],
+        "Possible spacings": [
+          {
+            "Name": "empty set",
+            "C": []
+          }
+        ],
         "Forte Complement": ["12-1"]
     },
     {
@@ -12,7 +17,16 @@
         "Prime form": [0],
         "Interval vector": [0,0,0,0,0,0],
         "Carter": null,
-        "Possible spacings": ["PU", "P8"],
+        "Possible spacings": [
+          {
+            "Name": "PU",
+            "C": [0]
+          },
+          {
+            "Name": "P8",
+            "C": [0]
+          }
+        ],
         "Forte Complement": ["11-1"]
     },
     {
@@ -20,7 +34,16 @@
         "Prime form": [0,1],
         "Interval vector": [1,0,0,0,0,0],
         "Carter": 1,
-        "Possible spacings": ["m2", "M7"],
+        "Possible spacings": [
+          {
+            "Name": "m2",
+            "C": [0,1]
+          },
+          {
+            "Name": "M7",
+            "C": [0,11]
+          }
+        ],
         "Forte Complement": ["10-1"]
     },
     {
@@ -28,7 +51,16 @@
         "Prime form": [0,2],
         "Interval vector": [0,1,0,0,0,0],
         "Carter": 2,
-        "Possible spacings": ["M2", "m7"],
+        "Possible spacings": [
+          {
+            "Name": "M2",
+            "C": [0,2]
+          },
+          {
+            "Name": "m7",
+            "C": [0,10]
+          }
+        ],
         "Forte Complement": ["10-2"]
     },
     {
@@ -36,7 +68,16 @@
         "Prime form": [0,3],
         "Interval vector": [0,0,1,0,0,0],
         "Carter": 3,
-        "Possible spacings": ["m3", "M6"],
+        "Possible spacings": [
+          {
+            "Name": "m3",
+            "C": [0,3]
+          },
+          {
+            "Name": "M6",
+            "C": [0,9]
+          }
+        ],
         "Forte Complement": ["10-3"]
     },
     {
@@ -44,7 +85,16 @@
         "Prime form": [0,4],
         "Interval vector": [0,0,0,1,0,0],
         "Carter": 4,
-        "Possible spacings": ["M3", "m6"],
+        "Possible spacings": [
+          {
+            "Name": "M3",
+            "C": [0,4]
+          },
+          {
+            "Name": "m6",
+            "C": [0,8]
+          }
+        ],
         "Forte Complement": ["10-4"]
     },
     {
@@ -52,7 +102,16 @@
         "Prime form": [0,5],
         "Interval vector": [0,0,0,0,1,0],
         "Carter": 5,
-        "Possible spacings": ["P4", "P5"],
+        "Possible spacings": [
+          {
+            "Name": "P4",
+            "C": [0,5]
+          },
+          {
+            "Name": "P5",
+            "C": [0,7]
+          }
+        ],
         "Forte Complement": ["10-5"]
     },
     {
@@ -60,7 +119,16 @@
         "Prime form": [0,6],
         "Interval vector": [0,0,0,0,0,1],
         "Carter": 6,
-        "Possible spacings": ["A4", "d5"],
+        "Possible spacings": [
+          {
+            "Name": "A4",
+            "C": [0,6]
+          },
+          {
+            "Name": "d5",
+            "C": [0,6]
+          }
+        ],
         "Forte Complement": ["10-6"]
     },
     {
@@ -124,7 +192,12 @@
         "Prime form": [0,1,6],
         "Interval vector": [1,0,0,0,1,1],
         "Carter": 7,
-        "Possible spacings": ["Viennese trichord"],
+        "Possible spacings": [
+          {
+            "Name": "Viennese trichord",
+            "C": [0,1,6]
+          }
+        ],
         "Forte Complement": ["9-5B"]
     },
     {
@@ -156,7 +229,12 @@
         "Prime form": [0,3,5],
         "Interval vector": [0,1,1,0,1,0],
         "Carter": null,
-        "Possible spacings": ["Blues trichord (min. pentatonic subset)"],
+        "Possible spacings": [
+          {
+            "Name": "Blues trichord (min. pentatonic subset)",
+            "C": [0,3,5]
+          }
+        ],
         "Forte Complement": ["9-7A"]
     },
     {
@@ -164,7 +242,12 @@
         "Prime form": [0,2,6],
         "Interval vector": [0,1,0,1,0,1],
         "Carter": 8,
-        "Possible spacings": ["It6"],
+        "Possible spacings": [
+          {
+            "Name": "It6",
+            "C": [0,6,8]
+          }
+        ],
         "Forte Complement": ["9-8B"]
     },
     {
@@ -180,7 +263,16 @@
         "Prime form": [0,2,7],
         "Interval vector": [0,1,0,0,2,0],
         "Carter": 5,
-        "Possible spacings": ["sus. chord"],
+        "Possible spacings": [
+          {
+            "Name": "sus2",
+            "C": [0,2,7]
+          },
+          {
+            "Name": "sus4",
+            "C": [0,5,7]
+          }
+        ],
         "Forte Complement": ["9-9"]
     },
     {
@@ -188,7 +280,12 @@
         "Prime form": [0,3,6],
         "Interval vector": [0,0,2,0,0,1],
         "Carter": 2,
-        "Possible spacings": ["dim. chord"],
+        "Possible spacings": [
+          {
+            "Name": "dim",
+            "C": [0,3,6]
+          }
+        ],
         "Forte Complement": ["9-10"]
     },
     {
@@ -196,7 +293,12 @@
         "Prime form": [0,3,7],
         "Interval vector": [0,0,1,1,1,0],
         "Carter": 6,
-        "Possible spacings": ["minor chord"],
+        "Possible spacings": [
+          {
+            "Name": "min",
+            "C": [0,3,7]
+          }
+        ],
         "Forte Complement": ["9-11B"]
     },
     {
@@ -204,7 +306,12 @@
         "Prime form": [0,4,7],
         "Interval vector": [0,0,1,1,1,0],
         "Carter": null,
-        "Possible spacings": ["major chord"],
+        "Possible spacings": [
+          {
+          "Name": "maj",
+          "C": [0,4,7]
+          }
+        ],
         "Forte Complement": ["9-11A"]
     },
     {
@@ -212,7 +319,12 @@
         "Prime form": [0,4,8],
         "Interval vector": [0,0,0,3,0,0],
         "Carter": 1,
-        "Possible spacings": ["Augmented Chord"],
+        "Possible spacings": [
+          {
+            "Name": "aug",
+            "C": [0,4,8]
+          }
+        ],
         "Forte Complement": ["9-12"]
     },
     {
@@ -284,7 +396,12 @@
         "Prime form": [0,1,2,7],
         "Interval vector": [2,1,0,0,2,1],
         "Carter": 6,
-        "Possible spacings": ["dream chord"],
+        "Possible spacings": [
+          {
+            "Name": "dream chord",
+            "C": [0,4,5,6]
+          }
+        ],
         "Forte Complement": ["8-6"]
     },
     {
@@ -308,7 +425,12 @@
         "Prime form": [0,1,6,7],
         "Interval vector": [2,0,0,0,2,2],
         "Carter": 2,
-        "Possible spacings": ["distance model"],
+        "Possible spacings": [
+          {
+            "Name": "distance model",
+            "C": [0,1,6,7]
+          }
+        ],
         "Forte Complement": ["8-9"]
     },
     {
@@ -388,7 +510,12 @@
         "Prime form": [0,1,4,6],
         "Interval vector": [1,1,1,1,1,1],
         "Carter": 18,
-        "Possible spacings": ["all-interval tetrachord"],
+        "Possible spacings": [
+          {
+            "Name": "all-interval tetrachord",
+            "C": [0,1,4,6]
+          }
+        ],
         "Forte Complement": ["8-z15B"]
     },
     {
@@ -396,7 +523,12 @@
         "Prime form": [0,2,5,6],
         "Interval vector": [1,1,1,1,1,1],
         "Carter": null,
-        "Possible spacings": [],
+        "Possible spacings": [
+          {
+            "Name": "4-z15B",
+            "C": [0,1,3,7]
+          }
+        ],
         "Forte Complement": ["8-z15A"]
     },
     {
@@ -420,7 +552,12 @@
         "Prime form": [0,3,4,7],
         "Interval vector": [1,0,2,2,1,0],
         "Carter": 13,
-        "Possible spacings": ["alpha chord"],
+        "Possible spacings": [
+          {
+            "Name": "alpha chord",
+            "C": [0,3,4,7]
+          }
+        ],
         "Forte Complement": ["8-17"]
     },
     {
@@ -428,7 +565,12 @@
         "Prime form": [0,1,4,7],
         "Interval vector": [1,0,2,1,1,1],
         "Carter": 21,
-        "Possible spacings": ["dim. M7 chord"],
+        "Possible spacings": [
+          {
+            "Name": "dimM7",
+            "C": [0,3,6,11]
+          }
+        ],
         "Forte Complement": ["8-18B"]
     },
     {
@@ -444,7 +586,12 @@
         "Prime form": [0,1,4,8],
         "Interval vector": [1,0,1,3,1,0],
         "Carter": 24,
-        "Possible spacings": ["mM7 chord"],
+        "Possible spacings": [
+          {
+            "Name": "minM7",
+            "C": [0,3,7,11]
+          }
+        ],
         "Forte Complement": ["8-19B"]
     },
     {
@@ -460,7 +607,12 @@
         "Prime form": [0,1,5,8],
         "Interval vector": [1,0,1,2,2,0],
         "Carter": 15,
-        "Possible spacings": ["M7 chord"],
+        "Possible spacings": [
+          {
+            "Name": "M7",
+            "C": [0,4,7,11]
+          }
+        ],
         "Forte Complement": ["8-20"]
     },
     {
@@ -476,7 +628,12 @@
         "Prime form": [0,2,4,7],
         "Interval vector": [0,2,1,1,2,0],
         "Carter": 27,
-        "Possible spacings": ["mu chord"],
+        "Possible spacings": [
+          {
+            "Name": "mu",
+            "C": [0,2,4,7]
+          }
+        ],
         "Forte Complement": ["8-22B"]
     },
     {
@@ -492,7 +649,12 @@
         "Prime form": [0,2,5,7],
         "Interval vector": [0,2,1,0,3,0],
         "Carter": 4,
-        "Possible spacings": ["quartal chord"],
+        "Possible spacings": [
+          {
+            "Name": "quartal chord",
+            "C": [0,2,5,7]
+          }
+        ],
         "Forte Complement": ["8-23"]
     },
     {
@@ -500,7 +662,12 @@
         "Prime form": [0,2,4,8],
         "Interval vector": [0,2,0,3,0,1],
         "Carter": 16,
-        "Possible spacings": ["A7 chord"],
+        "Possible spacings": [
+          {
+            "Name": "aug7",
+            "C": [0,4,8,10]
+          }
+        ],
         "Forte Complement": ["8-24"]
     },
     {
@@ -508,7 +675,12 @@
         "Prime form": [0,2,6,8],
         "Interval vector": [0,2,0,2,0,2],
         "Carter": 12,
-        "Possible spacings": ["Fr6"],
+        "Possible spacings": [
+          {
+            "Name": "Fr6",
+            "C": [0,4,5,10]
+          }
+        ],
         "Forte Complement": ["8-25"]
     },
     {
@@ -516,7 +688,12 @@
         "Prime form": [0,3,5,8],
         "Interval vector": [0,1,2,1,2,0],
         "Carter": 14,
-        "Possible spacings": ["minor seventh chord"],
+        "Possible spacings": [
+          {
+            "Name": "min7",
+            "C": [0,3,7,10]
+          }
+        ],
         "Forte Complement": ["8-26"]
     },
     {
@@ -524,7 +701,12 @@
         "Prime form": [0,2,5,8],
         "Interval vector": [0,1,2,1,1,1],
         "Carter": 29,
-        "Possible spacings": ["Half-diminished seventh chord"],
+        "Possible spacings": [
+          {
+            "Name": "Half-diminished seventh chord",
+            "C": [0,3,6,10]
+          }
+        ],
         "Forte Complement": ["8-27B"]
     },
     {
@@ -532,7 +714,12 @@
         "Prime form": [0,3,6,8],
         "Interval vector": [0,1,2,1,1,1],
         "Carter": null,
-        "Possible spacings": ["dominant 7th chord"],
+        "Possible spacings": [
+          {
+            "Name": "dom7",
+            "C": [0,4,7,10]
+          }
+        ],
         "Forte Complement": ["8-27A"]
     },
     {
@@ -540,7 +727,12 @@
         "Prime form": [0,3,6,9],
         "Interval vector": [0,0,4,0,0,2],
         "Carter": 5,
-        "Possible spacings": ["dim. 7th chord"],
+        "Possible spacings": [
+          {
+            "Name": "dim7",
+            "C": [0,3,6,9]
+          }
+        ],
         "Forte Complement": ["8-28"]
     },
     {
@@ -548,7 +740,12 @@
         "Prime form": [0,1,3,7],
         "Interval vector": [1,1,1,1,1,1],
         "Carter": 23,
-        "Possible spacings": ["all-interval tetrachord"],
+        "Possible spacings": [
+          {
+            "Name": "all-interval tetrachord",
+            "C": [0,1,3,7]
+          }
+        ],
         "Forte Complement": ["8-z29B"]
     },
     {
@@ -788,7 +985,12 @@
         "Prime form": [0,1,3,4,8],
         "Interval vector": [2,1,2,3,2,0],
         "Carter": null,
-        "Possible spacings": ["Farben chord"],
+        "Possible spacings": [
+          {
+            "Name": "Farben chord",
+            "C": [0,4,6,9,11]
+          }
+        ],
         "Forte Complement": ["7-z17"]
     },
     {
@@ -836,7 +1038,12 @@
         "Prime form": [0,2,3,7,8],
         "Interval vector": [2,1,1,2,3,1],
         "Carter": null,
-        "Possible spacings": ["In scale"],
+        "Possible spacings": [
+          {
+            "Name": "In scale",
+            "C": [0,1,5,7,8]
+          }
+        ],
         "Forte Complement": ["7-20A"]
     },
     {
@@ -900,7 +1107,12 @@
         "Prime form": [0,2,3,5,8],
         "Interval vector": [1,2,3,1,2,1],
         "Carter": null,
-        "Possible spacings": ["Seven six chord"],
+        "Possible spacings": [
+          {
+            "Name": "Seven six chord",
+            "C": [0,4,7,9,10]
+          }
+        ],
         "Forte Complement": ["7-25B"]
     },
     {
@@ -996,7 +1208,12 @@
         "Prime form": [0,1,3,6,9],
         "Interval vector": [1,1,4,1,1,2],
         "Carter": null,
-        "Possible spacings": ["beta chord"],
+        "Possible spacings": [
+          {
+            "Name": "beta chord",
+            "C": [0,1,3,6,9]
+          }
+        ],
         "Forte Complement": ["7-31B"]
     },
     {
@@ -1004,7 +1221,12 @@
         "Prime form": [0,2,3,6,9],
         "Interval vector": [1,1,4,1,1,2],
         "Carter": null,
-        "Possible spacings": ["Dominant minor ninth chord"],
+        "Possible spacings": [
+          {
+            "Name": "dom min9",
+            "C": [0,1,4,7,10]
+          }
+        ],
         "Forte Complement": ["7-31A"]
     },
     {
@@ -1020,7 +1242,16 @@
         "Prime form": [0,3,5,8,9],
         "Interval vector": [1,1,3,2,2,1],
         "Carter": null,
-        "Possible spacings": ["Elektra chord", "gamma chord"],
+        "Possible spacings": [
+          {
+            "Name": "Elektra",
+            "C": [0,3,5,8,9]
+          },
+          {
+            "Name": "gamma",
+            "C": [0,3,5,8,9]
+          }
+        ],
         "Forte Complement": ["7-32A"]
     },
     {
@@ -1036,7 +1267,12 @@
         "Prime form": [0,2,4,6,9],
         "Interval vector": [0,3,2,2,2,1],
         "Carter": null,
-        "Possible spacings": ["Dominant ninth chord"],
+        "Possible spacings": [
+          {
+            "Name": "dom9",
+            "C": [0,4,7,10,14]
+          }
+        ],
         "Forte Complement": ["7-34"]
     },
     {
@@ -1044,7 +1280,12 @@
         "Prime form": [0,2,4,7,9],
         "Interval vector": [0,3,2,1,4,0],
         "Carter": null,
-        "Possible spacings": ["M pentatonic scale"],
+        "Possible spacings": [
+          {
+            "Name": "M pentatonic scale",
+            "C": [0,2,4,7,9]
+          }
+        ],
         "Forte Complement": ["7-35"]
     },
     {
@@ -1092,7 +1333,12 @@
         "Prime form": [0,1,2,3,4,5],
         "Interval vector": [5,4,3,2,1,0],
         "Carter": 4,
-        "Possible spacings": ["chromatic hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "chromatic hexachord",
+            "C": [0,1,2,3,4,5]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1220,7 +1466,12 @@
         "Prime form": [0,2,3,5,6,7],
         "Interval vector": [3,3,3,2,3,1],
         "Carter": null,
-        "Possible spacings": ["Sacher hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "Sacher hexachord",
+            "C": [0,2,3,5,6,7]
+          }
+        ],
         "Forte Complement": ["6-z40A"]
     },
     {
@@ -1300,7 +1551,12 @@
         "Prime form": [0,1,2,4,7,8],
         "Interval vector": [3,2,2,3,3,2],
         "Carter": 35,
-        "Possible spacings": ["all-trichord hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "all-trichord hexachord",
+            "C": [0,1,2,4,7,8]
+          }
+        ],
         "Forte Complement": ["6-z43B"]
     },
     {
@@ -1348,7 +1604,12 @@
         "Prime form": [0,1,4,5,8,9],
         "Interval vector": [3,0,3,6,3,0],
         "Carter": 2,
-        "Possible spacings": ["Ode-to-Napoleon hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "Ode-to-Napoleon hexachord",
+            "C": [0,1,4,5,8,9]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1412,7 +1673,12 @@
         "Prime form": [0,1,3,5,6,8],
         "Interval vector": [2,3,3,2,4,1],
         "Carter": 43,
-        "Possible spacings": ["Major eleventh chord"],
+        "Possible spacings": [
+          {
+            "Name": "maj11",
+            "C": [0,4,7,11,13,17]
+          }
+        ],
         "Forte Complement": ["6-z47B"]
     },
     {
@@ -1460,7 +1726,12 @@
         "Prime form": [0,2,3,6,7,9],
         "Interval vector": [2,2,4,2,3,2],
         "Carter": 32,
-        "Possible spacings": ["Bridge chord"],
+        "Possible spacings": [
+          {
+            "Name": "Bridge chord",
+            "C": [0,2,3,6,7,9]
+          }
+        ],
         "Forte Complement": ["6-z50"]
     },
     {
@@ -1476,7 +1747,12 @@
         "Prime form": [0,2,3,6,8,9],
         "Interval vector": [2,2,4,2,2,3],
         "Carter": null,
-        "Possible spacings": ["Petrushka chord"],
+        "Possible spacings": [
+          {
+            "Name": "Petrushka chord",
+            "C": [0,2,3,6,8,9]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1500,7 +1776,12 @@
         "Prime form": [0,2,4,5,7,9],
         "Interval vector": [1,4,3,2,5,0],
         "Carter": 6,
-        "Possible spacings": ["diatonic hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "diatonic hexachord",
+            "C": [0,2,4,5,7,9]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1516,7 +1797,12 @@
         "Prime form": [0,2,4,6,7,9],
         "Interval vector": [1,4,3,2,4,1],
         "Carter": null,
-        "Possible spacings": ["Dominant eleventh chord"],
+        "Possible spacings": [
+          {
+            "Name": "dom11",
+            "C": [0,4,7,10,14,5]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1524,7 +1810,12 @@
         "Prime form": [0,1,3,5,7,9],
         "Interval vector": [1,4,2,4,2,2],
         "Carter": 9,
-        "Possible spacings": ["mystic chord"],
+        "Possible spacings": [
+          {
+            "Name": "mystic chord",
+            "C": [0,1,3,5,7,9]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1540,7 +1831,12 @@
         "Prime form": [0,2,4,6,8,"T"],
         "Interval vector": [0,6,0,6,0,3],
         "Carter": 1,
-        "Possible spacings": ["whole tone scale"],
+        "Possible spacings": [
+          {
+            "Name": "whole tone scale",
+            "C": [0,2,4,6,8,10]
+          }
+        ],
         "Forte Complement": []
     },
     {
@@ -1548,7 +1844,12 @@
         "Prime form": [0,1,2,3,4,5,6,7,8,9,"T","E"],
         "Interval vector": ["C","C","C","C","C",6],
         "Carter": null,
-        "Possible spacings": ["aggregate"],
+        "Possible spacings": [
+          {
+            "Name": "aggregate",
+            "C": [0,1,2,3,4,5,6,7,8,9,10,11]
+          }
+        ],
         "Forte Complement": ["0-1"]
     },
     {
@@ -1724,7 +2025,12 @@
         "Prime form": [0,1,2,3,5,6,7,8,"T"],
         "Interval vector": [6,7,6,6,8,3],
         "Carter": null,
-        "Possible spacings": ["blues scale"],
+        "Possible spacings": [
+          {
+            "Name": "blues scale",
+            "C": [0,1,2,3,5,6,7,8,10]
+          }
+        ],
         "Forte Complement": ["3-9"]
     },
     {
@@ -2036,7 +2342,12 @@
         "Prime form": [0,1,2,3,5,7,8,"T"],
         "Interval vector": [4,6,5,4,7,2],
         "Carter": null,
-        "Possible spacings": ["bebop scale"],
+        "Possible spacings": [
+          {
+            "Name": "bebop scale",
+            "C": [0,1,2,3,5,7,8,10]
+          }
+        ],
         "Forte Complement": ["4-23"]
     },
     {
@@ -2084,7 +2395,12 @@
         "Prime form": [0,1,3,4,6,7,9,"T"],
         "Interval vector": [4,4,8,4,4,4],
         "Carter": null,
-        "Possible spacings": ["octatonic scale"],
+        "Possible spacings": [
+          {
+            "Name": "octatonic scale",
+            "C": [0,1,3,4,6,7,9,10]
+          }
+        ],
         "Forte Complement": ["4-28"]
     },
     {
@@ -2380,7 +2696,12 @@
         "Prime form": [0,1,2,5,6,7,9],
         "Interval vector": [4,3,3,4,5,2],
         "Carter": null,
-        "Possible spacings": ["Persian scale"],
+        "Possible spacings": [
+          {
+            "Name": "Persian scale",
+            "C": [0,1,2,5,6,7,9]
+          }
+        ],
         "Forte Complement": ["5-20B"]
     },
     {
@@ -2404,7 +2725,12 @@
         "Prime form": [0,1,2,5,6,8,9],
         "Interval vector": [4,2,4,5,4,2],
         "Carter": 8,
-        "Possible spacings": ["double harmonic scale"],
+        "Possible spacings": [
+          {
+            "Name": "double harmonic scale",
+            "C": [0,1,2,5,6,8,9]
+          }
+        ],
         "Forte Complement": ["5-22"]
     },
     {
@@ -2428,7 +2754,12 @@
         "Prime form": [0,2,4,6,7,8,9],
         "Interval vector": [3,5,3,4,4,2],
         "Carter": 22,
-        "Possible spacings": ["enigmatic scale"],
+        "Possible spacings": [
+          {
+            "Name": "enigmatic scale",
+            "C": [0,2,4,6,7,8,9]
+          }
+        ],
         "Forte Complement": ["5-24A"]
     },
     {
@@ -2532,7 +2863,12 @@
         "Prime form": [0,1,2,4,6,8,9],
         "Interval vector": [3,4,3,5,4,2],
         "Carter": null,
-        "Possible spacings": ["minor Neapolitan scale"],
+        "Possible spacings": [
+          {
+            "Name": "minor Neapolitan scale",
+            "C": [0,1,2,4,6,8,9]
+          }
+        ],
         "Forte Complement": ["5-30B"]
     },
     {
@@ -2540,7 +2876,12 @@
         "Prime form": [0,1,3,4,6,8,9],
         "Interval vector": [3,3,6,3,3,3],
         "Carter": 38,
-        "Possible spacings": ["harmonic minor scale"],
+        "Possible spacings": [
+          {
+            "Name": "harmonic minor scale",
+            "C": [0,1,3,4,6,8,9]
+          }
+        ],
         "Forte Complement": ["5-31A"]
     },
     {
@@ -2556,7 +2897,12 @@
         "Prime form": [0,1,3,5,6,8,9],
         "Interval vector": [3,3,5,4,4,2],
         "Carter": 33,
-        "Possible spacings": ["harmonic major scale"],
+        "Possible spacings": [
+          {
+            "Name": "harmonic major scale",
+            "C": [0,1,3,5,6,8,9]
+          }
+        ],
         "Forte Complement": ["5-32A"]
     },
     {
@@ -2572,7 +2918,12 @@
         "Prime form": [0,1,2,4,6,8,"T"],
         "Interval vector": [2,6,2,6,2,3],
         "Carter": 6,
-        "Possible spacings": ["M Locrian scale"],
+        "Possible spacings": [
+          {
+            "Name": "M Locrian scale",
+            "C": [0,1,2,4,6,8,10]
+          }
+        ],
         "Forte Complement": ["5-33"]
     },
     {
@@ -2580,7 +2931,12 @@
         "Prime form": [0,1,3,4,6,8,"T"],
         "Interval vector": [2,5,4,4,4,2],
         "Carter": 9,
-        "Possible spacings": ["half dim. scale"],
+        "Possible spacings": [
+          {
+            "Name": "half dim. scale",
+            "C": [0,1,3,4,6,8,10]
+          }
+        ],
         "Forte Complement": ["5-34"]
     },
     {
@@ -2588,7 +2944,12 @@
         "Prime form": [0,1,3,5,6,8,"T"],
         "Interval vector": [2,5,4,3,6,1],
         "Carter": 7,
-        "Possible spacings": ["diatonic scale"],
+        "Possible spacings": [
+          {
+            "Name": "diatonic scale",
+            "C": [0,1,3,5,6,8,10]
+          }
+        ],
         "Forte Complement": ["5-35"]
     },
     {
@@ -2748,7 +3109,12 @@
         "Prime form": [0,1,2,5,6,9],
         "Interval vector": [3,1,3,4,3,1],
         "Carter": null,
-        "Possible spacings": ["Schoenberg hexachord"],
+        "Possible spacings": [
+          {
+            "Name": "Schoenberg hexachord",
+            "C": [0,1,2,5,6,9]
+          }
+        ],
         "Forte Complement": ["6-z19B","6-20","6-21A","6-21B","6-22A","6-22B"]
     },
     {
@@ -2780,7 +3146,12 @@
         "Prime form": [0,2,5,7,8,9],
         "Interval vector": [2,3,3,2,4,1],
         "Carter": 44,
-        "Possible spacings": ["blues scale"],
+        "Possible spacings": [
+          {
+            "Name": "blues scale",
+            "C": [0,2,5,7,8,9]
+          }
+        ],
         "Forte Complement": ["6-z25A"]
     },
     {
