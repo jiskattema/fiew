@@ -68,8 +68,8 @@ module.exports = {
     }
   },
   methods: {
-    setNote (evt) {
-      var note = utils.midiNumberToNote(evt.note.number)
+    setNote (number, velocity) {
+      var note = utils.midiNumberToNote(number) // FIXME
 
       utils.names.forEach(name => {
         groups[name].visible = false
@@ -77,17 +77,20 @@ module.exports = {
 
       var group = groups[note.key] || groups['C']
       group.visible = true
-      group.scale.x = evt.velocity
-      group.scale.y = evt.velocity
-      group.scale.z = evt.velocity
+      group.scale.x = velocity
+      group.scale.y = velocity
+      group.scale.z = velocity
     },
-    tick () {
+    tick (piano, elapsed) {
       if (playerStatus !== 'initialized' || !this.$refs['threejs']) {
         return
       }
 
       utils.names.forEach(name => {
-        groups[name].rotateY(0.2)
+        // * elapsed [s]
+        // * rotations/second [1/s]
+        // * 1 circle [rad]
+        groups[name].rotateY((elapsed / 1000) * 0.5 * 2.0 * Math.PI)
       })
 
       var p = this.$refs['threejs']

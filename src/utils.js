@@ -1,24 +1,3 @@
-export const states = {
-  KEY_NONE: 0,
-  KEY_PRESSED: 1,
-  KEY_HOLD: 2,
-  KEY_SUSTAIN: 3,
-
-  HOLD_NONE: 0,
-  HOLD_PRESSED: 1,
-
-  SUSTAIN_NONE: 0,
-  SUSTAIN_PRESSED: 1,
-
-  SOFT_NONE: 0,
-  SOFT_PRESSED: 1
-}
-
-export var keyStates = Array(128).fill(states.KEY_NONE)
-export var holdState = states.HOLD_NONE
-export var sustainState = states.SUSTAIN_NONE
-export var softState = states.SOFT_NONE
-
 // midi note 60 is C4, and 72 is C5
 export var names = [
   'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
@@ -68,21 +47,6 @@ function buildForteTable () {
 export var forteTable = buildForteTable()
 
 /**
- * Get an array of currently sounding notes.
- *
- * returns: int[], an array containing the MIDI number of active notes
- */
-function getActiveNotes () {
-  var activeNotes = []
-  keyStates.forEach((state, i) => {
-    if (state !== states.KEY_NONE) {
-      activeNotes.push(i)
-    }
-  })
-  return activeNotes
-}
-
-/**
  * Convert a MIDI note number to a key and octave.
  *
  * returns: {octave: int, key: string}
@@ -90,62 +54,12 @@ function getActiveNotes () {
 export function midiNumberToNote (number) {
   number = 1 * number
   var octave = Math.floor(number / 12)
-  var key = names[number - octave * 12]
+  var pc = number - octave * 12
   return {
     octave: octave,
-    key: key
+    pc: pc,
+    key: names[pc]
   }
-}
-
-/**
- * Convert an array of MIDI notes in a pitch set.
- *
- * params:
- *   midiNotes: int[], array of MIDI note numbers
- *              default: the result of getActiveNotes()
- *
- * returns: int[], the sorted pitch set.
- */
-export function getPitchSet (midiNotes) {
-  if (!midiNotes) {
-    midiNotes = getActiveNotes()
-  }
-
-  // map midi notes to the interval [0, 11]
-  var form = []
-  midiNotes.forEach(note => {
-    var octave = Math.floor(note / 12)
-    var pitch = note - octave * 12
-    if (form.indexOf(pitch) === -1) {
-      form.push(pitch)
-    }
-  })
-  form.sort((a, b) => a - b)
-  return form
-}
-
-/**
- * Count the pitches in an array of MIDI numbers.
- *
- * params:
- *   midiNotes: int[], array of MIDI note numbers
- *              default: the result of getActiveNotes()
- *
- * returns: int[12], the pitch counts set.
- */
-export function getPitchCount (midiNotes) {
-  if (!midiNotes) {
-    midiNotes = getActiveNotes()
-  }
-
-  // map midi notes to the interval [0, 11]
-  var count = Array(12).fill(0)
-  midiNotes.forEach(note => {
-    var octave = Math.floor(note / 12)
-    var pitch = note - octave * 12
-    count[pitch] += 1
-  })
-  return count
 }
 
 /**
@@ -162,14 +76,13 @@ export function getPitchCount (midiNotes) {
  * radii = sqrt(img[k] ** 2 + real[k] ** 2)
  *
  * params:
- *   int[], array of MIDI notes to analyze
- *   default: the currently active notes
+ *   int[12], array of pitch counts to analyze
+ *       NOTE: at the moment, mapped to 0 or 1 (ie. /= 0)
  *
  * returns:
  *   [float[6], float[6]], phases and radii of the DFT
  */
-export function getPitchPhases (midiNotes) {
-  var pitches = getPitchCount(midiNotes) // later mapped to [0, 1]
+export function getPitchPhases (counts) {
   var real = Array(12).fill(0)
   var img = Array(12).fill(0)
   var phases = Array(12).fill(0)
@@ -178,8 +91,8 @@ export function getPitchPhases (midiNotes) {
   // sum(0, N) x_n [cos(2pikn/N) - i sin(2pikn/n)]
   for (let k = 0; k < 12; k++) {
     for (let n = 0; n < 12; n++) {
-      real[k] += (pitches[n] ? 1 : 0) * Math.cos(2 * Math.PI * k * n / 12)
-      img[k] += (pitches[n] ? 1 : 0) * Math.sin(2 * Math.PI * k * n / 12)
+      real[k] += (counts[n] ? 1 : 0) * Math.cos(2 * Math.PI * k * n / 12)
+      img[k] += (counts[n] ? 1 : 0) * Math.sin(2 * Math.PI * k * n / 12)
     }
   }
   for (let k = 0; k < 12; k++) {
@@ -300,19 +213,12 @@ export function getChord (form) {
 
 export default {
   forteTable: forteTable,
-  states: states,
-  keyStates: keyStates,
-  holdState: holdState,
-  sustainState: sustainState,
-  softState: softState,
   names: names,
   namesFlat: namesFlat,
   namesSharp: namesSharp,
   getNormalForm: getNormalForm,
   getChord: getChord,
-  getPitchSet: getPitchSet,
   getPitchPhases: getPitchPhases,
-  getPitchCount: getPitchCount,
   midiNumberToNote: midiNumberToNote,
   printPc: printPc
 }

@@ -21,6 +21,9 @@
       <img src="../../static/img/logo.png" style="display:inline-block">
       Fiew
     </div>
+    <div v-on:click="demoSong" class="jukebox">
+      <img class="midiimg" src="./jukebox.svg">
+    </div>
     <div class="midiconf">
       <ul class="midilist">
         <li v-on:click="nextInput">
@@ -37,13 +40,19 @@
 </template>
 
 <script>
-// var pitchSet = utils.getPitchSet(activeNotes)
-// var primeSet = utils.getPrimeForm(pitchSet)
-// console.log(primeSet)
+
+var jukebox = require('../store').jukebox
 
 export default {
   name: 'Home',
   methods: {
+    demoSong () {
+      if (jukebox.isPlaying) {
+        jukebox.stop()
+      } else {
+        jukebox.playDemo()
+      }
+    },
     nextOutput () {
       this.$store.dispatch('outputdeviceNext')
     },
@@ -93,6 +102,14 @@ export default {
   height: 10vh;
 }
 .midiname {
+}
+.jukebox {
+  position: absolute;
+  right: 3vw;
+  bottom: 3vh;
+  height: 22vh;
+  width: 10vw;
+  white-space: nowrap;
 }
 ul {
   list-style: none;

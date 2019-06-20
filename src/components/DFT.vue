@@ -130,7 +130,7 @@ module.exports = {
       this.mystate.zeroPhase[6] = this.mystate.prevDft[0][6]
       makeNotes(this.mystate)
     },
-    tick () {
+    tick (piano, elapsed) {
       var p = this.$refs['twojs']
       if (playerStatus !== 'initialized' || !p) {
         return
@@ -152,7 +152,7 @@ module.exports = {
       }
 
       // update visible notes immediately
-      var pc = utils.getPitchCount()
+      var pc = piano.getPitchCounts()
       pc.forEach((p, i) => {
         if (p) {
           // show active note
@@ -164,7 +164,7 @@ module.exports = {
       })
 
       // animate phase power and dots to new settings
-      var dft = utils.getPitchPhases()
+      var dft = utils.getPitchPhases(pc)
       var prevDft = this.mystate.prevDft
       tween(prevDft, dft)
 

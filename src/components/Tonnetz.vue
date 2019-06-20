@@ -16,7 +16,7 @@
 
 var TwoLib = require('two.js')
 // var chroma = require('chroma-js')
-var utils = require('../utils')
+var states = require('../piano').states
 
 const PLAYER_NAME = 'Tonnetz'
 
@@ -97,7 +97,7 @@ function makeNotes (mystate) {
         if ([1, 3, 6, 8, 11].indexOf(p) !== -1) {
           c.stroke = '#000000'
         } else {
-          c.stroke = '#555555'
+          c.stroke = '#000000' // '#555555'
         }
 
         if (Math.abs(y) > 3) {
@@ -113,8 +113,12 @@ function makeNotes (mystate) {
 
         shapesPerNote[midinumber].push(c)
 
-        // var t = two.makeText(utils.namesFlat[p] + octave, x0 + x * DELTAX, y * DELTAY)
-        // t.size = NOTER * 0.7
+        // var t = two.makeText(
+        //   utils.namesFlat[p] + octave,
+        //   x0 + x * DELTAX,
+        //   y * DELTAY
+        // )
+        // t.size = NOTER1 * 0.7
         // shapesPerNote[midinumber].push(t)
       }
     }
@@ -140,15 +144,13 @@ module.exports = {
       this.mystate.pitchdelta = delta
       makeNotes(this.mystate)
     },
-    noteOn (evt) {
-      var n = evt.note.number
-      this.mystate.notes[n] = evt.velocity // 1
+    noteOn (number, velocity) {
+      this.mystate.notes[number] = velocity
     },
-    noteOff (evt) {
-      var n = evt.note.number
-      this.mystate.notes[n] = 0
+    noteOff (number) {
+      this.mystate.notes[number] = 0
     },
-    tick () {
+    tick (piano, elapsed) {
       var p = this.$refs['twojs']
       if (playerStatus !== 'initialized' || !p) {
         return
@@ -173,14 +175,32 @@ module.exports = {
       // get the hash with the two js shapes
       var shapesPerNote = this.mystate['shapesPerNote']
       var notes = this.mystate['notes']
+      var ps = piano.getPitchSet()
 
+      var pc = 0
       for (let key = 0; key < 128; key++) {
         shapesPerNote[key].forEach(s => {
-          s.radius = NOTER2 * notes[key] + NOTER1 * (1 - notes[key])
-          if (utils.keyStates[key] === utils.states.KEY_NONE) {
+          // reset key state?
+          if (piano.keys[key] === states.KEY_NONE) {
             notes[key] = 0
           }
+
+          if (notes[key]) {
+            // key pressed
+            s.radius = NOTER2 * notes[key] + NOTER1 * (1 - notes[key])
+          } else if (ps.indexOf(pc) !== -1) {
+            // pitch class pressed
+            s.radius = 0.2 * (NOTER2 + NOTER1)
+          } else {
+            s.radius = NOTER1
+          }
         })
+
+        if (pc >= 11) {
+          pc = 0
+        } else {
+          pc += 1
+        }
       }
 
       two.update()

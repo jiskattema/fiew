@@ -17,6 +17,7 @@
     "@vue/cli": "^3.7.0",
     "chroma-js": "^2.0.3",
     "dat.gui": "^0.7.5",
+    "midi-player-js": "^2.0.5",
     "oimo": "^1.0.9",
     "three": "^0.102.1",
     "two.js": "^0.7.0-beta.3",

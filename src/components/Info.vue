@@ -30,15 +30,13 @@ module.exports = {
     }
   },
   methods: {
-    noteOn (evt) {
-      var n = evt.note.number
-      this.mystate.notes[n] = 1
+    noteOn (number, velocity) {
+      this.mystate.notes[number] = 1
     },
-    noteOff (evt) {
-      var n = evt.note.number
-      this.mystate.notes[n] = 0
+    noteOff (number) {
+      this.mystate.notes[number] = 0
     },
-    tick () {
+    tick (piano, elapsed) {
       var p = this.$refs['twojs']
       if (playerStatus !== 'initialized' || !p) {
         return
@@ -61,7 +59,7 @@ module.exports = {
 
       two.update()
 
-      var ps = utils.getPitchSet()
+      var ps = piano.getPitchSet()
       var normal = utils.getNormalForm(ps)
       var chord = utils.getChord(normal)
 
@@ -97,6 +95,7 @@ module.exports = {
       name: PLAYER_NAME,
       tick: this.tick,
       noteOn: this.noteOn,
+      noteOff: this.noteOff,
       scope: this
     })
   },

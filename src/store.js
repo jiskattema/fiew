@@ -2,16 +2,23 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import WebMidi from 'webmidi'
-import utils from './utils'
+import { Jukebox } from './jukebox'
+import { Piano } from './piano'
 
 const DEVICE_OFF = 'OFF'
 
 Vue.use(Vuex)
 
+var jukebox = new Jukebox()
+var piano = new Piano()
+
 var input
 var output
 
-export default new Vuex.Store({
+window.jukebox = jukebox
+jukebox.setInstrument(piano)
+
+var store = new Vuex.Store({
   state: {
     inputdevice: -1,
     outputdevice: -1,
@@ -33,11 +40,12 @@ export default new Vuex.Store({
       delete state.players[name]
     },
     setInputDevice (state, number) {
+      // Remove all listeners
       if (input) {
-        // remove all listener
         input.removeListener()
       }
 
+      // Turn Off?
       if (number === -1) {
         input = null
         state.inputdevice = -1
@@ -45,142 +53,46 @@ export default new Vuex.Store({
         return
       }
 
-      // get a new listener
+      // Switch to the new input
       input = WebMidi.inputs[number]
-
-      // hook up events
-      if (input) {
-        state.inputdevice = number
-        state.inputdeviceName = WebMidi.inputs[number].name
-
-        input.addListener('noteon', 'all', evt => {
-          // a key is pressed:
-          // none    => pressed
-          // pressed    pressed
-          // hold    => pressed
-          // sustain    sustain
-          if (utils.keyStates[evt.note.number] !== utils.states.KEY_SUSTAIN) {
-            utils.keyStates[evt.note.number] = utils.states.KEY_PRESSED
-          }
-
-          Object.keys(state.players).forEach(name => {
-            var player = state.players[name]
-            if (player.noteOn) {
-              player.noteOn.call(player.scope, evt)
-            }
-          })
-        })
-
-        input.addListener('noteoff', 'all', evt => {
-          // a key is released:
-          // none       none
-          // pressed => hold if holdpedal, else none
-          // hold       hold
-          // sustain    sustain
-
-          if (utils.keyStates[evt.note.number] === utils.states.KEY_PRESSED) {
-            if (utils.holdState === utils.states.HOLD_NONE) {
-              utils.keyStates[evt.note.number] = utils.states.KEY_NONE
-            } else if (utils.holdState === utils.states.HOLD_PRESSED) {
-              utils.keyStates[evt.note.number] = utils.states.KEY_HOLD
-            }
-          }
-
-          Object.keys(state.players).forEach(name => {
-            var player = state.players[name]
-            if (player.noteOff) {
-              player.noteOff.call(player.scope, evt)
-            }
-          })
-        })
-
-        input.addListener('controlchange', 'all', evt => {
-          var newstate
-
-          if (evt.controller.name === 'holdpedal') {
-            newstate = evt.value > 64 ? utils.states.HOLD_PRESSED : utils.states.HOLD_NONE
-            // holdpedal is pressed:
-            // none       none
-            // pressed    pressed
-            // hold       none
-            // sustain    sustain
-            // no changes
-            if (newstate === utils.states.HOLD_NONE) {
-              // holdpedal is released:
-              // none       none
-              // pressed    pressed
-              // hold    => none
-              // sustain    sustain
-              utils.keyStates.forEach((state, i) => {
-                if (state === utils.states.KEY_HOLD) {
-                  utils.keyStates[i] = utils.states.KEY_NONE
-                }
-              })
-            }
-            utils.holdState = newstate
-          } else if (evt.controller.name === 'sustenutopedal') {
-            newstate = evt.value > 64 ? utils.states.SUSTAIN_PRESSED : utils.states.SUSTAIN_NONE
-            if (newstate === utils.states.SUSTAIN_PRESSED) {
-              // sustainpedal is pressed:
-              // none       none
-              // pressed => sustain
-              // hold    => sustain
-              // sustain    sustain
-              utils.keyStates.forEach((state, i) => {
-                if (state === utils.states.KEY_HOLD || state === utils.states.KEY_PRESSED) {
-                  utils.keyStates[i] = utils.states.KEY_SUSTAIN
-                }
-              })
-            } else {
-              // sustainpedal is released:
-              // none       none
-              // pressed    pressed
-              // hold       hold
-              // sustain => hold if holdpedal pressed, none otherwise
-              utils.keyStates.forEach((state, i) => {
-                if (state === utils.states.KEY_SUSTAIN) {
-                  if (utils.holdState === utils.states.HOLD_PRESSED) {
-                    utils.keyStates[i] = utils.states.KEY_HOLD
-                  } else {
-                    utils.keyStates[i] = utils.states.KEY_NONE
-                  }
-                }
-              })
-            }
-            utils.sustainState = newstate
-          } else if (evt.controller.name === 'softpedal') {
-            utils.softState = evt.value > 64 ? utils.states.SOFT_PRESSED : utils.states.SOFT_NONE
-          }
-        })
-      } else {
+      if (!input) {
         alert('Cannot get MIDI device')
+        return
       }
-      if (state.outputdevice !== -1 && output && input) {
-        input.addListener('midimessage', 'all', evt => {
-          output._midiOutput.send(evt.data)
-        })
-      }
+      state.inputdevice = number
+      state.inputdeviceName = WebMidi.inputs[number].name
+
+      // Hook up events
+      input.addListener('noteon', 'all', evt => {
+        piano.noteOn(evt.note.number, evt.velocity)
+      })
+      input.addListener('noteoff', 'all', evt => {
+        piano.noteOff(evt.note.number)
+      })
+      input.addListener('controlchange', 'all', evt => {
+        piano.pedal(evt.controller.name, evt.value)
+      })
+      input.addListener('midimessage', 'all', evt => {
+        piano.rawMidiEvent(evt.data)
+      })
     },
     setOutputDevice (state, number) {
+      // Switch to the requested output
       if (number === -1) {
         output = null
         state.outputdevice = -1
         state.outputdeviceName = DEVICE_OFF
-        return
-      }
-
-      output = WebMidi.outputs[number]
-      if (output) {
+      } else {
+        output = WebMidi.outputs[number]
         state.outputdevice = number
         state.outputdeviceName = WebMidi.outputs[number].name
       }
-      if (input) {
-        input.removeListener('midimessage')
-      }
-      if (state.outputdevice !== -1 && output && input) {
-        input.addListener('midimessage', 'all', evt => {
-          output._midiOutput.send(evt.data)
-        })
+
+      // Inform the Piano
+      if (output) {
+        piano.setMidiOutput(output)
+      } else {
+        piano.setMidiOutput(null)
       }
     }
   },
@@ -211,3 +123,5 @@ export default new Vuex.Store({
     }
   }
 })
+
+export { store, piano, jukebox }

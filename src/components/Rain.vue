@@ -41,12 +41,12 @@ module.exports = {
     }
   },
   methods: {
-    noteOn (evt) {
+    noteOn (number, velocity) {
       var mesh = meshes[0].clone()
 
-      var note = utils.midiNumberToNote(evt.note.number)
+      var note = utils.midiNumberToNote(number)
 
-      mesh.position.x = evt.note.number
+      mesh.position.x = number
       mesh.position.y = 100
       mesh.position.z = 1
 
@@ -57,7 +57,7 @@ module.exports = {
       this.scene.add(mesh)
     },
 
-    tick (elapsed) {
+    tick (piano, elapsed) {
       if (playerStatus !== 'initialized') {
         return
       }
