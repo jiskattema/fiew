@@ -19,7 +19,7 @@ export var namesSharp = [
  * Forte complement:  string, Forte name of chord complement
  * Interval vector:   int[6] of Ints, where xi counts
  *                    the number of intervals of size i
- * Possible spacings: string[], chord names
+ * Possible spacings: [{name, C}, ], Array of chord name, and its notes in C
  * Prime form:        int[], prime form of the chord.
  */
 function buildForteTable () {
@@ -28,6 +28,15 @@ function buildForteTable () {
 
   var i
   for (i = 0; i < list.length; i++) {
+    // to help identify the key of the chords,
+    // calculate the normal form for the chord in C
+    var spacings = list[i]['Possible spacings']
+    spacings.forEach(spacing => {
+      var normal = getNormalForm(spacing['C'])
+      spacing.offset = normal[0] || 0
+    })
+
+    // hash the chords by a key created from the prime form
     var primeForm = list[i]['Prime form']
     primeForm.map(pc => {
       if (pc === 'E' || pc === 'e') {
@@ -197,18 +206,31 @@ export function getNormalForm (ps) {
 }
 
 export function getChord (form) {
+  var offset
   if (!form || form.length === 0) {
-    return Object.assign({key: names[0]}, forteTable[0])
+    // no notes is the empty set
+    offset = 0
+  } else {
+    // translate form to start at 0
+    offset = form[0]
+    for (let i = 0; i < form.length; i++) {
+      form[i] -= offset
+      while (form[i] > 12) form[i] -= 12
+      while (form[i] < 0) form[i] += 12
+    }
   }
 
-  // translate form to start at 0
-  var offset = form[0]
-  for (let i = 0; i < form.length; i++) {
-    form[i] -= offset
-    while (form[i] > 12) form[i] -= 12
-    while (form[i] < 0) form[i] += 12
-  }
-  return Object.assign({key: names[offset]}, forteTable[form.join('-')])
+  // get the chord from the Forte table
+  var chord = Object.assign({}, forteTable[form.join('-')])
+
+  // find the key this chord is in
+  chord['Possible spacings'].forEach(spacing => {
+    var key = offset - spacing.offset
+    while (key < 0) key += 12
+    spacing.key = names[key]
+  })
+
+  return chord
 }
 
 export default {

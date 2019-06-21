@@ -63,12 +63,16 @@ module.exports = {
       var normal = utils.getNormalForm(ps)
       var chord = utils.getChord(normal)
 
-      this.chordName =
-        chord.key +
-        ' ' + chord['Possible spacings'] +
+      // "Possible spacings" := [ {name, C, key}, ]
+      var out =
         'ps: [' + ps.join(',') + '] ' +
         'normal: <' + normal.join(',') + '> ' +
         'Forte: ' + chord['Forte']
+
+      chord['Possible spacings'].forEach(spacing => {
+        out += ' ' + spacing['key'] + spacing['Name']
+      })
+      this.chordName = out
     }
   },
   mounted () {
