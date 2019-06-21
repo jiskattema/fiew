@@ -188,11 +188,14 @@ module.exports = {
           if (notes[key]) {
             // key pressed
             s.radius = NOTER2 * notes[key] + NOTER1 * (1 - notes[key])
+            s.fill = '#eeee00'
           } else if (ps.indexOf(pc) !== -1) {
             // pitch class pressed
             s.radius = 0.2 * (NOTER2 + NOTER1)
+            s.fill = '#000000'
           } else {
             s.radius = NOTER1
+            s.fill = '#eeee00'
           }
         })
 
