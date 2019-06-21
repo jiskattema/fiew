@@ -64,7 +64,7 @@ var store = new Vuex.Store({
 
       // Hook up events
       input.addListener('noteon', 'all', evt => {
-        piano.noteOn(evt.note.number, evt.velocity)
+        piano.noteOn(evt.note.number, evt.velocity, evt.timestamp)
       })
       input.addListener('noteoff', 'all', evt => {
         piano.noteOff(evt.note.number)
