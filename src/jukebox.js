@@ -8,17 +8,18 @@ class Jukebox {
     this.isPlaying = false
     this._player = new MidiPlayer.Player(this._handleMidiEvent.bind(this))
     this._player.on('endOfFile', () => {
+      this._player.stop()
       this.isPlaying = false
     })
     this._instrument = null
   }
 
   playDemo () {
-    var player = this._player
-
-    player.loadDataUri(mario)
-    player.play()
-    this.isPlaying = true
+    if (!this.isPlaying) {
+      this._player.loadDataUri(mario)
+      this._player.play()
+      this.isPlaying = true
+    }
   }
 
   stop () {
@@ -47,24 +48,25 @@ class Jukebox {
 
     // this is a WebMIDIjs midiOutput
     var output = this._instrument._output
-    if (!output) {
-      return
-    }
-    if (evt.name === 'Note on') {
-      output.playNote(evt.noteNumber, evt.channel, {
-        rawVelocity: true,
-        veloctiy: evt.velocity
-      })
-    } else if (evt.name === 'Note off') {
-      output.stopNote(evt.noteNumber, evt.channel)
+    if (output) {
+      if (evt.name === 'Note on') {
+        output.playNote(evt.noteNumber, evt.channel, {
+          rawVelocity: true,
+          veloctiy: evt.velocity
+        })
+      } else if (evt.name === 'Note off') {
+        output.stopNote(evt.noteNumber, evt.channel)
+      }
     }
 
     // play the event also on our instrument
     // so that the visualizations learn about it
     if (evt.name === 'Note on') {
-      this._instrument.noteOn(evt.noteNumber, evt.velocity * 0.01)
+      this._instrument.noteOn(evt.noteNumber, evt.velocity / 128.0)
     } else if (evt.name === 'Note off') {
       this._instrument.noteOff(evt.noteNumber)
+    } else {
+      // console.log('Unimplemented event:', evt.name, evt)
     }
   }
 }

@@ -53,7 +53,7 @@ class Piano {
   noteOn (number, velocity, timestamp) {
     // Relabel velocity=0 to a noteOff event,
     // which is an common alternative
-    if (velocity === 0) {
+    if (velocity < 0.5 / 128.0) {
       this.noteOff(number)
       return
     }
