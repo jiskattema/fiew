@@ -224,11 +224,18 @@ export function getChord (form) {
   var chord = Object.assign({}, forteTable[form.join('-')])
 
   // find the key this chord is in
-  chord['Possible spacings'].forEach(spacing => {
-    var key = offset - spacing.offset
-    while (key < 0) key += 12
-    spacing.key = names[key]
-  })
+  var spacings = chord['Possible spacings']
+  if (spacings) {
+    spacings.forEach(spacing => {
+      var key = offset - spacing.offset
+      while (key < 0) key += 12
+      spacing.key = names[key]
+    })
+  } else {
+    // TODO: some chords are missing from the table,
+    // return something that at least doenst crash the site
+    chord['Possible spacings'] = []
+  }
 
   return chord
 }
