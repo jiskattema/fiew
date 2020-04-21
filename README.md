@@ -50,8 +50,13 @@ Find the address, and connect a midi player to it:
 130:0    FLUID Synth (4361)               Synth input port (4361:0)
  $ aplaymidi -p 14 myfile.mid
 ```
+Alternatively, press the juxebox on the main page to play a demo song.
 
-Then setup a synthesizer to play the sounds, fi. fluidsynth.
+Then setup a synthesizer to play the sounds, fi. fluidsynth:
+
+```bash
+ $ fluidsynth -a pulseaudio -m alsa_seq /usr/share/soundfonts/FluidR3_GM.sf2
+```
 If you don't like the commandline, have a look at *qsynth* for a simple GUI.
 
 ## Build Setup
