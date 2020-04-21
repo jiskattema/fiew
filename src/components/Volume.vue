@@ -2,6 +2,14 @@
   <div id="top">
     <div id="twojs" ref="twojs">
     </div>
+    <img id="volume_ppp" src="./volume_ppp.svg">
+    <img id="volume_pp" src="./volume_pp.svg">
+    <img id="volume_p" src="./volume_p.svg">
+    <img id="volume_mp" src="./volume_mp.svg">
+    <img id="volume_mf" src="./volume_mf.svg">
+    <img id="volume_f" src="./volume_f.svg">
+    <img id="volume_ff" src="./volume_ff.svg">
+    <!-- <img id="volume_fff" src="./volume_fff.svg"> -->
   </div>
 </template>
 
@@ -132,6 +140,8 @@ module.exports = {
     this.$store.commit('removePlayer', PLAYER_NAME)
   }
 }
+// 16 32 48 64 80 96 112 127
+// 12 25 38 50 63 75 88  95
 </script>
 
 <style scoped>
@@ -140,4 +150,12 @@ module.exports = {
   height: 95vh;
   margin-top: 0;
 }
+#volume_ppp { position: absolute; height: 8%; bottom: 15%; left: 2%; }
+#volume_pp { position: absolute; height: 8%;  bottom: 25%; left: 25%; }
+#volume_p { position: absolute; height: 8%;  bottom: 15%; left: 38%; }
+#volume_mp { position: absolute; height: 8%;  bottom: 25%; left: 50%; }
+#volume_mf { position: absolute; height: 10%;  bottom: 15%; left: 63%; }
+#volume_f { position: absolute; height: 10%;  bottom: 25%; left: 75%; }
+#volume_ff { position: absolute; height: 10%;  bottom: 15%; left: 88%; }
+#volume_fff { position: absolute; height: 10%;  bottom: 25%; right: 2%; }
 </style>

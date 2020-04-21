@@ -7,6 +7,7 @@ import Rain from './components/Rain.vue'
 import DFT from './components/DFT.vue'
 import Tonnetz from './components/Tonnetz.vue'
 import Volume from './components/Volume.vue'
+import Info from './components/Info.vue'
 
 Vue.use(VueRouter)
 const router = new VueRouter({ routes: [
@@ -39,6 +40,11 @@ const router = new VueRouter({ routes: [
     path: '/volume',
     name: 'Volume',
     component: Volume
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: Info
   }
 ]})
 
