@@ -27,6 +27,7 @@ class Jukebox {
       this._player.stop()
       this.isPlaying = false
     }
+    this.playDemo()
   }
 
   /**
