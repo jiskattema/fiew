@@ -6,6 +6,7 @@ import { Jukebox } from './jukebox'
 import { Piano } from './piano'
 
 const DEVICE_OFF = 'OFF'
+const DEVICE_JUKEBOX = 'Jukebox'
 
 Vue.use(Vuex)
 
@@ -15,7 +16,6 @@ var piano = new Piano()
 var input
 var output
 
-window.jukebox = jukebox
 jukebox.setInstrument(piano)
 
 var store = new Vuex.Store({
@@ -40,6 +40,10 @@ var store = new Vuex.Store({
       delete state.players[name]
     },
     setInputDevice (state, number) {
+      if (jukebox.isPlaying) {
+        jukebox.stop()
+      }
+
       // Remove all listeners
       if (input) {
         input.removeListener()
@@ -50,6 +54,12 @@ var store = new Vuex.Store({
         input = null
         state.inputdevice = -1
         state.inputdeviceName = DEVICE_OFF
+        return
+      } else if (number === WebMidi.inputs.length) {
+        input = null
+        state.inputdevice = WebMidi.inputs.length
+        state.inputdeviceName = DEVICE_JUKEBOX
+        jukebox.playDemo()
         return
       }
 
@@ -109,7 +119,7 @@ var store = new Vuex.Store({
     },
     inputdeviceNext ({ commit, state }) {
       var n = state.inputdevice + 1
-      if (n >= WebMidi.inputs.length) {
+      if (n > WebMidi.inputs.length) {
         n = -1
       }
       commit('setInputDevice', n)
