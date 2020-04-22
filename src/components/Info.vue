@@ -33,6 +33,9 @@ module.exports = {
       chord['Possible spacings'].forEach(spacing => {
         out += ' ' + spacing['key'] + spacing['Name']
       })
+      if (out.length === 0) {
+        out = 'unknown'
+      }
       this.chordName = out
 
       out = ''
@@ -58,14 +61,16 @@ module.exports = {
 
 <style scoped>
 #chordName {
-  font-size: 20em;
+  font-size: 30vh;
   width: 100%;
   height: 10%;
 }
 
 #chordInfo {
-  font-size: 20em;
+  position: absolute;
+  font-size: 5vh;
   width: 100%;
   height: 10%;
+  bottom: 4vh;
 }
 </style>
